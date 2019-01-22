@@ -133,7 +133,6 @@
         "alt-container": "git+https://github.com/bitshares/alt-container.git#cf4e2c690a54e49fc9fe2dc99ab8816e6c3e5a86",
         "alt-react": "git+https://github.com/bitshares/alt-react.git#d91addef51f58e41e9857ebb0dd9177cfbd3b583",
         "bignumber.js": "^4.0.0",
-        "bitshares-report": "^0.2.0",
         "bitshares-ui-style-guide": "git+https://github.com/bitshares/bitshares-ui-style-guide.git#3a5716f46473da9dd94399a1e782a7007d541fa8",
         "eidosjs": "0.0.1",
         "browser-locale": "^1.0.3",
