@@ -368,7 +368,7 @@
             "workers_short": "预算项目"
         },
         "voting": "投票",
-        "welcome": "欢迎使用 BitShares 系统",
+        "welcome": "欢迎使用 Eidos 系统",
         "whitelist": {
             "add": "加到白名单",
             "add_black": "加到黑名单",
@@ -397,7 +397,7 @@
     },
     "app_init": {
         "browser": "不支持的浏览器",
-        "browser_text": "你使用的浏览器未经过 BitShares 钱包软件的充分测试。强烈建议你备份钱包，并将其导入谷歌 Chrome 浏览器。今后经过我们充分测试后，你或许可以继续使用现在的浏览器。请了解相关风险。",
+        "browser_text": "你使用的浏览器未经过 Eidos 钱包软件的充分测试。强烈建议你备份钱包，并将其导入谷歌 Chrome 浏览器。今后经过我们充分测试后，你或许可以继续使用现在的浏览器。请了解相关风险。",
         "check_latency": "Running latency checks...",
         "check_latency_feedback": "Running latency checks (%(pinged)s/%(totalToPing)s nodes) ...",
         "check_latency_feedback_country": "Latency check in best country (%(pinged)s/%(totalToPing)s nodes)",
@@ -924,7 +924,7 @@
         "loading": "载入中…",
         "nosync": "区块链数据陈旧，请等待数据完成同步",
         "synced": "已同步",
-        "title": "BitShares",
+        "title": "Eidos",
         "unsynced": "未同步",
         "update_available": "有可用的更新"
     },
@@ -1004,7 +1004,7 @@
         "fiat_text": "法币的充值提现服务由 CCEDK 提供。你必须先行在 CCEDK 上进行账户注册。下面是支持的货币：",
         "frozen": "账户 %(account)s 充提服务被冻结",
         "gateway": "网关",
-        "gateway_text": "网关能让你将 BitShares 中的资产与外部资产进行互换，比如 OPEN.BTC 到 BTC。",
+        "gateway_text": "网关能让你将 Eidos 中的资产与外部资产进行互换，比如 OPEN.BTC 到 BTC。",
         "generate": "生成地址",
         "generate_new": "获得新地址",
         "generate_new_memo": "获得新备注内容",
@@ -1117,7 +1117,7 @@
         "payments_legacy": "Send (legacy)",
         "settings": "设置",
         "showcases": "Spotlight",
-        "title": "BitShares 钱包",
+        "title": "Eidos 钱包",
         "unlock": "解锁钱包",
         "unlock_password": "使用密码登录",
         "unlock_short": "登录",
@@ -1166,7 +1166,7 @@
             "borrow": "Borrow",
             "buy": "Buy"
         },
-        "download": "Download new version of BitShares UI",
+        "download": "Download new version of Eidos UI",
         "excel": "Download .csv file",
         "eye": "Hide Node",
         "eye-striked": "Show Node",
@@ -1377,7 +1377,7 @@
             "address_not_valid": "Invalid address",
             "amount": "提现金额",
             "available": "Available: ",
-            "eidos_account": "Send to Bitshares Account",
+            "eidos_account": "Send to Eidos Account",
             "cancel": "Cancel",
             "cannot_cover": "Insufficient funds!",
             "estimated_value": "Estimated Value",
@@ -1582,7 +1582,7 @@
         "walletDescription": "A bin-file will be automatically created. Please download it and keep in a safe place. You’ll need to upload this file to login to your account in the future.",
         "walletLoginByValue": "Bin-file + Password",
         "walletModelTitle": "By bin-file",
-        "walletNote": "Please keep in mind, that BitShares doesn't store users passwords and couldn't recover users accounts after password loss.",
+        "walletNote": "Please keep in mind, that Eidos doesn't store users passwords and couldn't recover users accounts after password loss.",
         "whyBinFile": "Why do I need a .bin file?"
     },
     "settings": {
@@ -1702,7 +1702,7 @@
             "title": "Barter"
         },
         "borrow": {
-            "description": "Borrow a BitAsset from the BitShares Blockchain by locking up collateral (e.g. bitUSD, bitCNY, etc.)",
+            "description": "Borrow a BitAsset from the Eidos Blockchain by locking up collateral (e.g. bitUSD, bitCNY, etc.)",
             "title": "Collaterized Debt Position"
         },
         "direct_debit": {
@@ -1718,7 +1718,7 @@
             "title": "Timed transfer"
         },
         "voting": {
-            "description": "Vote on block producers, committee members and worker proposals to influence strategic decisions and advancement of the BitShares Blockchain.",
+            "description": "Vote on block producers, committee members and worker proposals to influence strategic decisions and advancement of the Eidos Blockchain.",
             "title": "Voting"
         }
     },
@@ -1999,7 +1999,7 @@
         "final": "转账后余额",
         "from": "来自",
         "header": "转账详情",
-        "header_subheader": "可以将资产转账给其他 BitShares 帐号持有者",
+        "header_subheader": "可以将资产转账给其他 Eidos 帐号持有者",
         "header_subheader_propose": "Propose to send funds from one %(wallet_name)s account to another. The BY account is the account proposing the transaction.",
         "memo": "备注消息",
         "memo_unlock": "解锁钱包以查看交易备注",
@@ -2127,7 +2127,7 @@
         "import_backup_choose": "请在对话框中选择备份文件。备份文件不会上传至远端服务器，只在本地浏览器中进行处理。",
         "import_balance": "导入余额",
         "import_bts": "导入一个 EON 0.9.3c 私钥导出文件",
-        "import_bts1": "从BitShares 0.9.3c导入",
+        "import_bts1": "从Eidos 0.9.3c导入",
         "import_key_success": "已成功导入 %(count)s 个密钥。",
         "import_keys": "导入私钥",
         "import_keys_tool": "私钥导入工具",

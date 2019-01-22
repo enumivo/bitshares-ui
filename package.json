@@ -121,7 +121,7 @@
                 "AppImage",
                 "snap"
             ],
-            "synopsis": "BitShares: Cryptocurrency and Decentralized Exchange"
+            "synopsis": "Eidos: Cryptocurrency and Decentralized Exchange"
         },
         "directories": {
             "buildResources": "resources",

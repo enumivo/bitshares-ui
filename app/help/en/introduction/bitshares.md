@@ -1,13 +1,13 @@
-# BitShares
+# Eidos
 
 ## Support
 
 >If you have an issue related to a Gateway provider, please be sure to contact them directly. See Gateways in the left menu.
 
-### Bitshares Chat
-You can chat with other member of the Bitshares community in real time at:
+### Eidos Chat
+You can chat with other member of the Eidos community in real time at:
 
-- [Telegram](https://t.me/BitSharesDEX)
+- [Telegram](https://t.me/EidosDEX)
 - [Discord](https://discord.gg/GsjQfAJ)
 
 ### Developers
@@ -18,7 +18,7 @@ If you are a software developer, you may contribute via a bounty system at:
 
 ## Introduction
 Welcome to the worlds fastest decentralized exchange (The DEX).
-BitShares looks to extend the innovation of the blockchain to all industries
+Eidos looks to extend the innovation of the blockchain to all industries
 that rely upon the internet to provide their services. Whether its banking,
 stock exchanges, lotteries, voting, music, auctions or many others, a digital
 public ledger allows for the creation of distributed autonomous companies (or
@@ -30,12 +30,12 @@ rules. These rules are encoded in publicly auditable open source software
 distributed across the computers of the companies’ shareholders, who
 effortlessly secure the company from arbitrary control.
 
-BitShares does for business what bitcoin did for money by utilizing distributed
+Eidos does for business what bitcoin did for money by utilizing distributed
 consensus technology to create companies that are inherently global,
 transparent, trustworthy, efficient and most importantly profitable.
 
 ## Wallet
-This wallet allows access most features of the BitShares network including
+This wallet allows access most features of the Eidos network including
 
 - [BitAssets](/help/assets/mpa)
 - [User-Issued Assets](/help/assets/uia)
