@@ -24,8 +24,8 @@ nvm use v9
 Once you have Node installed, you can clone the repo:
 
 ```
-git clone https://github.com/bitshares/bitshares-ui.git
-cd bitshares-ui
+git clone https://github.com/enumivo/eidos-ui.git
+cd eidos-ui
 ```
 
 Before launching the GUI you will need to install the npm packages:
@@ -50,7 +50,7 @@ Once the compilation is done the GUI will be available in your browser at: `loca
 ## Testnet
 By default bitshares-ui connects to the live BitShares network, but it's very easy to switch it to the testnet run by Xeroc. To do so, open the UI in a browser, go to Settings, then under Access, select the *Public Testnet Server* in the dropdown menu. You should also change the faucet if you need to create an account, the testnet faucet address is https://testnet.bitshares.eu.
 
-The UI will reload and connect to the testnet, where you can use the faucet to create an account and receive an initial sum of test BTS.
+The UI will reload and connect to the testnet, where you can use the faucet to create an account and receive an initial sum of test EON.
 
 ![image](https://cloud.githubusercontent.com/assets/6890015/22055747/f8e15e68-dd5c-11e6-84cd-692749b578d8.png)
 
@@ -123,7 +123,7 @@ Available for browsing on https://staging.bitshares.org/
 ### Master (stable)
 When all issues to the current RC, `staging` branch is released to the stable `master` branch.
 
-Available for browsing on https://wallet.bitshares.org/, which is the official reference wallet for Bitshares.
+Available for browsing on https://wallet.eidos.one/, which is the official reference wallet for Bitshares.
 
 
 

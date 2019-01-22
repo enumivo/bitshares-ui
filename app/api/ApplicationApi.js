@@ -7,7 +7,7 @@ import {
     TransactionHelper,
     FetchChain,
     ChainStore
-} from "bitsharesjs";
+} from "eidosjs";
 import counterpart from "counterpart";
 import {Notification} from "bitshares-ui-style-guide";
 

@@ -80,7 +80,7 @@ class GatewayStore {
                         a &&
                         coins_by_type[a.outputCoinType] &&
                         (coins_by_type[a.outputCoinType].walletType ===
-                            "bitshares2" && // Only use bitshares2 wallet types
+                            "eidos2" && // Only use eidos2 wallet types
                             this.bridgeInputs.indexOf(a.inputCoinType) !== -1) // Only use coin types defined in bridgeInputs
                     );
                 })

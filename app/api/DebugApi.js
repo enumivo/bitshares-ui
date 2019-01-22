@@ -1,4 +1,4 @@
-import {SerializerValidation, types} from "bitsharesjs";
+import {SerializerValidation, types} from "eidosjs";
 var config = require("chain/serializer_config");
 
 class DebugApi {

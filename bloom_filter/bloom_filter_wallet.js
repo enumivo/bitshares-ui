@@ -1,14 +1,14 @@
 /* eslint-disable */
 
-// Filter BTS 0.9.2+ import keys export file so that it will include only private keys
-// that may be found in the BTS 2.0 genesis block.
+// Filter EON 0.9.2+ import keys export file so that it will include only private keys
+// that may be found in the EON 2.0 genesis block.
 // Dependencies:
-// ./bloom_bitshares.dat (1,048,576 bytes) sha1 4d80faa41a5e868899febdc9dab48d1f2d567487992810cf0532f3c0ee2b266c
+// ./bloom_eidos.dat (1,048,576 bytes) sha1 4d80faa41a5e868899febdc9dab48d1f2d567487992810cf0532f3c0ee2b266c
 // nodejs, npm, and: npm install
 
 /*
-* ./bloom.dat is from bitshares/graphene/programs/genesis_util/create_bloom_filter.py
-* The bloom filter was created with a genesis containing BTS prefixed keys.  Create
+* ./bloom.dat is from eidos/graphene/programs/genesis_util/create_bloom_filter.py
+* The bloom filter was created with a genesis containing EON prefixed keys.  Create
 * or dowload this file first.
 */
 
@@ -21,20 +21,20 @@ var fs = require('fs')
 
 require('coffee-script/register') // npm install coffee-script
 
-var graphenejs = require("bitsharesjs");
+var graphenejs = require("eidosjs");
 var h = graphenejs.hash;
 var key_utils = graphenejs.key;
-const chainPrefix = "BTS";
+const chainPrefix = "EON";
 
-fs.readFile('bloom_bitshares.dat', function (err, data) {
+fs.readFile('bloom_eidos.dat', function (err, data) {
     if (err) throw err
-    console.error('bloom_bitshares.dat (' + data.length + ' bytes)','sha1',h.sha1(data).toString('hex'),'\n')
+    console.error('bloom_eidos.dat (' + data.length + ' bytes)','sha1',h.sha1(data).toString('hex'),'\n')
 
     var bits_in_filter = data.length * 8 // 8388608 (test data)
     function in_bloom(str) {
-        // echo -n '0:BTS87mopaNqLDjT1BvzqQR3QjWzWSTgkWnMcwt5sqxHuavCBi1s3m'|sha256sum
-        // str = 'BTS87mopaNqLDjT1BvzqQR3QjWzWSTgkWnMcwt5sqxHuavCBi1s3n' // should be found
-        // str = 'BTS4A43UCoWz1F5vqLxX3LLoGHKs1GzCGRjZ' // should be found
+        // echo -n '0:EON87mopaNqLDjT1BvzqQR3QjWzWSTgkWnMcwt5sqxHuavCBi1s3m'|sha256sum
+        // str = 'EON87mopaNqLDjT1BvzqQR3QjWzWSTgkWnMcwt5sqxHuavCBi1s3n' // should be found
+        // str = 'EON4A43UCoWz1F5vqLxX3LLoGHKs1GzCGRjZ' // should be found
         for(var hashes = 0; hashes < 3; hashes++) {
             hex = h.sha256( hashes + ':' + str) //"...af2884"
             bit_address = parseInt(hex.slice(-3).toString('hex'), 16) % bits_in_filter // 3090564
@@ -75,7 +75,7 @@ fs.readFile('bloom_bitshares.dat', function (err, data) {
                 if( ! keys.public_keys) unsupportedJsonFormat()
                 var key = keys.public_keys[k]
 
-                if( /^GPH/.test(key) ) key = chainPrefix + key.substring(3)
+                if( /^EON/.test(key) ) key = chainPrefix + key.substring(3)
                 if(in_bloom( key )) continue
                 var addresses = key_utils.addresses(key, chainPrefix)
                 var addy_found = false

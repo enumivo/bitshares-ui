@@ -13,7 +13,7 @@ import {citadelAPIs} from "api/apiConfig";
 import {debounce} from "lodash-es";
 import {checkFeeStatusAsync, checkBalance} from "common/trxHelper";
 import {Asset} from "common/MarketClasses";
-import {ChainStore} from "bitsharesjs/es";
+import {ChainStore} from "eidosjs/es";
 import {getConversionJson} from "common/gatewayMethods";
 import PropTypes from "prop-types";
 import {Modal} from "bitshares-ui-style-guide";
@@ -320,8 +320,8 @@ class CitadelBridgeDepositRequest extends React.Component {
                             ) != -1
                         ) {
                             if (
-                                input_coin_info.walletType != "bitshares2" &&
-                                output_coin_info.walletType == "bitshares2"
+                                input_coin_info.walletType != "eidos2" &&
+                                output_coin_info.walletType == "eidos2"
                             ) {
                                 allowed_mappings_for_deposit[
                                     pair.inputCoinType

@@ -85,7 +85,7 @@ module.exports = function(env) {
             __UI_API__: JSON.stringify(env.apiUrl),
             __TESTNET__: !!env.testnet,
             __DEPRECATED__: !!env.deprecated,
-            DEFAULT_SYMBOL: "BTS",
+            DEFAULT_SYMBOL: "EON",
             __GIT_BRANCH__: JSON.stringify(git.branch()),
             __PERFORMANCE_DEVTOOL__: !!env.perf_dev
         }),
@@ -385,9 +385,9 @@ module.exports = function(env) {
                     root_dir,
                     "node_modules/moment/moment.js"
                 ),
-                bitsharesjs$: path.resolve(
+                eidosjs$: path.resolve(
                     root_dir,
-                    "node_modules/bitsharesjs/"
+                    "node_modules/eidosjs/"
                 ),
                 "bitshares-ui-style-guide$": path.resolve(
                     root_dir,

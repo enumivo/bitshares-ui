@@ -3,7 +3,7 @@ import alt from "alt-instance";
 import MarketsActions from "actions/MarketsActions";
 import market_utils from "common/market_utils";
 import ls from "common/localStorage";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "eidosjs";
 import utils from "common/utils";
 import {
     LimitOrder,
@@ -73,7 +73,7 @@ class MarketsStore {
         this.bucketSize = this._getBucketSize();
         this.priceHistory = [];
         this.lowestCallPrice = null;
-        this.marketBase = "BTS";
+        this.marketBase = "EON";
         this.marketStats = Immutable.Map({
             change: 0,
             volumeBase: 0,
@@ -95,7 +95,7 @@ class MarketsStore {
 
         this.baseAsset = {
             id: "1.3.0",
-            symbol: "BTS",
+            symbol: "EON",
             precision: 5
         };
 

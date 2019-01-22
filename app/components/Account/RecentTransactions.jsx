@@ -5,7 +5,7 @@ import Operation from "../Blockchain/Operation";
 import ChainTypes from "../Utility/ChainTypes";
 import BindToChainState from "../Utility/BindToChainState";
 import utils from "common/utils";
-import {ChainTypes as grapheneChainTypes, FetchChain} from "bitsharesjs";
+import {ChainTypes as grapheneChainTypes, FetchChain} from "eidosjs";
 import ps from "perfect-scrollbar";
 import counterpart from "counterpart";
 import Icon from "../Icon/Icon";
@@ -173,79 +173,6 @@ class RecentTransactions extends React.Component {
         return history;
     }
 
-    async _generateCSV() {
-        this.setState({fetchingAccountHistory: true});
-        let start = 0,
-            limit = 150;
-        let account = this.props.accountsList[0].get("id");
-        let accountName = (await FetchChain("getAccount", account)).get("name");
-        let recordData = {};
-
-        while (true) {
-            let res = await report.getAccountHistoryES(
-                account,
-                limit,
-                start,
-                "https://wrapper.elasticsearch.bitshares.ws"
-            );
-            if (!res.length) break;
-
-            await report.resolveBlockTimes(res);
-
-            /* Before parsing results we need to know the asset info (precision) */
-            await report.resolveAssets(res);
-
-            res.map(function(record) {
-                const trx_id = record.id;
-                // let timestamp = api.getBlock(record.block_num);
-                const type = ops[record.op[0]];
-                const data = record.op[1];
-
-                switch (type) {
-                    default:
-                        recordData[trx_id] = {
-                            timestamp: new Date(record.block_time),
-                            type,
-                            data
-                        };
-                }
-            });
-
-            start += res.length;
-        }
-        if (!Object.keys(recordData).length) {
-            return this.setState({
-                fetchingAccountHistory: false,
-                accountHistoryError: true
-            });
-        }
-        recordData = report.groupEntries(recordData);
-        let parsedData = report.parseData(recordData, account, accountName);
-        let csvString = "";
-        for (let line of parsedData) {
-            csvString += line.join(",") + "\n";
-        }
-        let blob = new Blob([csvString], {type: "text/csv;charset=utf-8"});
-        let today = new Date();
-        saveAs(
-            blob,
-            "btshist-" +
-                today.getFullYear() +
-                "-" +
-                ("0" + (today.getMonth() + 1)).slice(-2) +
-                "-" +
-                ("0" + today.getDate()).slice(-2) +
-                "-" +
-                ("0" + today.getHours()).slice(-2) +
-                ("0" + today.getMinutes()).slice(-2) +
-                ".csv"
-        );
-        this.setState({
-            fetchingAccountHistory: false,
-            accountHistoryError: null
-        });
-    }
-
     _onChangeFilter(e) {
         this.setState({
             filter: e.target.value
@@ -335,7 +262,6 @@ class RecentTransactions extends React.Component {
                         <span>
                             <a
                                 className="inline-block"
-                                onClick={this._generateCSV.bind(this)}
                                 data-tip={counterpart.translate(
                                     "transaction.csv_tip"
                                 )}

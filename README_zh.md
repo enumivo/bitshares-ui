@@ -22,8 +22,8 @@ nvm use v9
 Node 安装完成后，获取项目的源代码：
 
 ```
-git clone https://github.com/bitshares/bitshares-ui.git
-cd bitshares-ui
+git clone https://github.com/enumivo/eidos-ui.git
+cd eidos-ui
 ```
 
 在启动之前，需要先安装 npm 软件包：
@@ -48,7 +48,7 @@ npm start
 
 默认情况下，bitshares-ui 会连接到正常比特股网络。切换到 Xeroc 运行的测试网络也很容易，在设置页面的接入点设置中选择 *Public Testnet Server* 即可。如果你需要创建帐号，你同时需要修改水龙头设置。测试网络的水龙头地址是 https://testnet.bitshares.eu 。
 
-UI 会刷新并连接到测试网络，你可以通过水龙头创建账户并收到一些用于测试的 BTS。
+UI 会刷新并连接到测试网络，你可以通过水龙头创建账户并收到一些用于测试的 EON。
 
 ![image](https://cloud.githubusercontent.com/assets/6890015/22055747/f8e15e68-dd5c-11e6-84cd-692749b578d8.png)
 

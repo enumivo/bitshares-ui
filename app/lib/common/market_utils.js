@@ -1,5 +1,5 @@
 import utils from "./utils";
-import {ChainStore, ChainTypes} from "bitsharesjs";
+import {ChainStore, ChainTypes} from "eidosjs";
 let {object_type} = ChainTypes;
 let opTypes = Object.keys(object_type);
 import {Asset} from "./MarketClasses";
@@ -257,15 +257,15 @@ const MarketUtils = {
 
         if (order.debt) {
             if (invert) {
-                // Price in USD/BTS, amount should be in BTS, value should be in USD, debt is in USD
-                // buy is in USD, sell is in BTS
-                // quote is USD, base is BTS
+                // Price in USD/EON, amount should be in EON, value should be in USD, debt is in USD
+                // buy is in USD, sell is in EON
+                // quote is USD, base is EON
                 value = order.debt / quotePrecision;
                 amount = this.limitByPrecision(value / price.full, base);
             } else {
-                // Price in BTS/USD, amount should be in USD, value should be in BTS, debt is in USD
-                // buy is in USD, sell is in BTS
-                // quote is USD, base is BTS
+                // Price in EON/USD, amount should be in USD, value should be in EON, debt is in USD
+                // buy is in USD, sell is in EON
+                // quote is USD, base is EON
 
                 amount = this.limitByPrecision(
                     order.debt / quotePrecision,

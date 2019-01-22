@@ -653,8 +653,8 @@ class BlockTradesBridgeDepositRequest extends React.Component {
                             ) != -1
                         ) {
                             if (
-                                input_coin_info.walletType != "bitshares2" &&
-                                output_coin_info.walletType == "bitshares2"
+                                input_coin_info.walletType != "eidos2" &&
+                                output_coin_info.walletType == "eidos2"
                             ) {
                                 allowed_mappings_for_deposit[
                                     pair.inputCoinType
@@ -666,8 +666,8 @@ class BlockTradesBridgeDepositRequest extends React.Component {
                                     pair.inputCoinType
                                 ].push(pair.outputCoinType);
                             } else if (
-                                input_coin_info.walletType == "bitshares2" &&
-                                output_coin_info.walletType != "bitshares2"
+                                input_coin_info.walletType == "eidos2" &&
+                                output_coin_info.walletType != "eidos2"
                             ) {
                                 allowed_mappings_for_withdraw[
                                     pair.inputCoinType
@@ -679,8 +679,8 @@ class BlockTradesBridgeDepositRequest extends React.Component {
                                     pair.inputCoinType
                                 ].push(pair.outputCoinType);
                             } else if (
-                                input_coin_info.walletType == "bitshares2" &&
-                                output_coin_info.walletType == "bitshares2"
+                                input_coin_info.walletType == "eidos2" &&
+                                output_coin_info.walletType == "eidos2"
                             ) {
                                 allowed_mappings_for_conversion[
                                     pair.inputCoinType

@@ -18,7 +18,7 @@ import {routerTransitioner} from "../../routerTransition";
 import LoadingIndicator from "../LoadingIndicator";
 import counterpart from "counterpart";
 import ChoiceModal from "../Modal/ChoiceModal";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "eidosjs";
 import ifvisible from "ifvisible";
 import {getWalletName} from "branding";
 import {Tooltip} from "bitshares-ui-style-guide";
@@ -80,9 +80,7 @@ class Footer extends React.Component {
     }
 
     componentDidMount() {
-        this.checkNewVersionAvailable.call(this);
-
-        this.downloadLink = "https://bitshares.org/download";
+        this.downloadLink = "https://eidos.one/download";
 
         let ensure = this._ensureConnectivity.bind(this);
         ifvisible.on("wakeup", function() {
@@ -106,28 +104,6 @@ class Footer extends React.Component {
             nextState.showAccessSettingsTooltip !==
                 this.state.showAccessSettingsTooltip
         );
-    }
-
-    checkNewVersionAvailable() {
-        if (__ELECTRON__) {
-            fetch(
-                "https://api.github.com/repos/bitshares/bitshares-ui/releases/latest"
-            )
-                .then(res => {
-                    return res.json();
-                })
-                .then(
-                    function(json) {
-                        let oldVersion = String(json.tag_name);
-                        let newVersion = String(APP_VERSION);
-                        let isReleaseCandidate =
-                            APP_VERSION.indexOf("rc") !== -1;
-                        if (!isReleaseCandidate && oldVersion !== newVersion) {
-                            this.setState({newVersion});
-                        }
-                    }.bind(this)
-                );
-        }
     }
 
     downloadVersion() {
@@ -491,7 +467,7 @@ class Footer extends React.Component {
                                     />
                                     {__GIT_BRANCH__ === "staging" ? (
                                         <a
-                                            href={`https://github.com/bitshares/bitshares-ui/commit/${version.trim()}`}
+                                            href={`https://github.com/enumivo/eidos-ui/commit/${version.trim()}`}
                                             className="version"
                                             target="_blank"
                                             rel="noopener noreferrer"

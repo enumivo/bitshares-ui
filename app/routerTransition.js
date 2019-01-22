@@ -1,5 +1,5 @@
-import {Apis, Manager} from "bitsharesjs-ws";
-import {ChainStore} from "bitsharesjs";
+import {Apis, Manager} from "eidosjs-ws";
+import {ChainStore} from "eidosjs";
 
 // Stores
 import iDB from "idb-instance";
@@ -380,7 +380,7 @@ class RouterTransitioner {
 
     /**
      *
-     * @param apiNodeUrl the url of the target node, e.g. wss://eu.nodes.bitshares.ws
+     * @param apiNodeUrl the url of the target node, e.g. wss://dex.eidos.one
      * @returns {boolean} true the security matches, meaning that we either have:
      *                         - user connected via http to the wallet and target node is ws:// or wss://
      *                         - user connected via https and target node is wss://
@@ -782,7 +782,7 @@ export default routerTransitioner.willTransitionTo.bind(routerTransitioner);
  */
 class Pinger {
     /**
-     * @param connectionManager bitsharesjs connectionmanager
+     * @param connectionManager eidosjs connectionmanager
      * @param updateLatencies callback to update the settings object
      * @param updateTransitionTarget callback to update the message displayed to the user
      * @param pingAll if true, resolve after pinging all

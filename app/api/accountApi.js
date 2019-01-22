@@ -1,4 +1,4 @@
-import {Apis} from "bitsharesjs-ws";
+import {Apis} from "eidosjs-ws";
 
 class Api {
     lookupAccounts(startChar, limit) {

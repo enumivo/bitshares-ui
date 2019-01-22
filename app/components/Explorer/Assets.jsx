@@ -10,11 +10,11 @@ import assetUtils from "common/asset_utils";
 import counterpart from "counterpart";
 import FormattedAsset from "../Utility/FormattedAsset";
 import AssetName from "../Utility/AssetName";
-import {ChainStore} from "bitsharesjs";
+import {ChainStore} from "eidosjs";
 import utils from "common/utils";
 import ls from "common/localStorage";
 import PaginatedList from "../Utility/PaginatedList";
-import {Apis} from "bitsharesjs-ws";
+import {Apis} from "eidosjs-ws";
 import {Radio, Table, Select, Input, Icon} from "bitshares-ui-style-guide";
 
 let accountStorage = new ls("__graphene__");
@@ -243,7 +243,7 @@ class Assets extends React.Component {
                             ? description.market
                             : coreAsset
                                 ? coreAsset.get("symbol")
-                                : "BTS");
+                                : "EON");
 
                     dataSource.push({
                         symbol: asset.symbol,
@@ -352,7 +352,7 @@ class Assets extends React.Component {
                             ? description.market
                             : coreAsset
                                 ? coreAsset.get("symbol")
-                                : "BTS");
+                                : "EON");
 
                     dataSource.push({
                         symbol: asset.symbol,
@@ -405,7 +405,7 @@ class Assets extends React.Component {
                             ? description.market
                             : coreAsset
                                 ? coreAsset.get("symbol")
-                                : "BTS");
+                                : "EON");
 
                     return (
                         <tr key={asset.id.split(".")[2]}>

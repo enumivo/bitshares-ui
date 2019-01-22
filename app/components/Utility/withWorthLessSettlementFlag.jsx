@@ -1,5 +1,5 @@
 import React, {PureComponent} from "react";
-import {Apis} from "bitsharesjs-ws";
+import {Apis} from "eidosjs-ws";
 
 import AssetWrapper from "./AssetWrapper";
 import {Asset, Price} from "common/MarketClasses";
