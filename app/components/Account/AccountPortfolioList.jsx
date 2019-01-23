@@ -337,7 +337,7 @@ class AccountPortfolioList extends React.Component {
     }
 
     _renderBuy = (symbol, canBuy, assetName, emptyCell, balance) => {
-        if (symbol === "BTS" && balance <= 100000) {
+        if (symbol === "EON" && balance <= 100000) {
             // Precision of 5, 1 = 10^5
             return (
                 <span>
@@ -510,7 +510,7 @@ class AccountPortfolioList extends React.Component {
             );
             const canDeposit =
                 (backedCoin && backedCoin.depositAllowed) ||
-                asset.get("symbol") == "BTS";
+                asset.get("symbol") == "EON";
 
             const canWithdraw =
                 backedCoin &&
@@ -837,7 +837,7 @@ class AccountPortfolioList extends React.Component {
                                 .find(
                                     a => a.backingCoin === thisAssetName[1]
                                 ) ||
-                            asset.get("symbol") == "BTS";
+                            asset.get("symbol") == "EON";
 
                         const canBuy = !!this.props.bridgeCoins.get(
                             asset.get("symbol")

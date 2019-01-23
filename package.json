@@ -1,11 +1,11 @@
 {
-    "name": "BitShares2-light",
+    "name": "Eidos2-light",
     "version": "2.0.181212",
-    "description": "Advanced wallet interface for the BitShares financial blockchain.",
+    "description": "Advanced wallet interface for the Eidos financial blockchain.",
     "homepage": "https://github.com/bitshares/bitshares-ui",
     "author": "Sigve Kvalsvik <kvalsvik.crypto@gmail.com>",
     "contributors": [
-        "BitShares UI Worker",
+        "Eidos UI Worker",
         "James Calfee",
         "Dan Larimer",
         "Valentine Zavgorodnev <valentine.zavgorodnev@gmail.com>"
@@ -86,7 +86,7 @@
     },
     "browsersList": "electron 1.7",
     "build": {
-        "productName": "BitShares",
+        "productName": "Eidos",
         "appId": "org.bitshares.graphene",
         "files": [
             "build/electron",
@@ -127,7 +127,7 @@
                 "AppImage",
                 "snap"
             ],
-            "synopsis": "BitShares: Cryptocurrency and Decentralized Exchange"
+            "synopsis": "Eidos: Cryptocurrency and Decentralized Exchange"
         },
         "directories": {
             "buildResources": "resources",

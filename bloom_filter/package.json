@@ -1,5 +1,5 @@
 {
-  "name": "bitshares-keys-bloom-filter",
+  "name": "eidos-keys-bloom-filter",
   "version": "1.0.0",
   "description": "",
   "main": "bloom_filter_wallet.js",

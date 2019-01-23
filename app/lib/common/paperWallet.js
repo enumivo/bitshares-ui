@@ -103,7 +103,7 @@ const _createPaperWalletAsPDF = function(
     });
     Promise.all(content).then(() => {
         pdf.save(
-            "bitshares" +
+            "eidos" +
                 "-paper-wallet-" +
                 (locked ? "public-" : "private-") +
                 accountName +

@@ -31,7 +31,7 @@ class AccountOverview extends React.Component {
             ), // alphabetical A -> B, numbers high to low
             shownAssets: props.viewSettings.get("shownAssets", "active"),
             alwaysShowAssets: [
-                "BTS"
+                "EON"
                 // "USD",
                 // "CNY",
                 // "OPEN.BTC",

@@ -1,6 +1,6 @@
 #### Содержание
 
-- [BitShares](introduction/bitshares.md)
+- [Eidos](introduction/bitshares.md)
 - [Кошелек](introduction/wallets.md)
 - [Резервные копии](introduction/backups.md)
 - [Блокчейн](introduction/blockchain.md)
@@ -21,5 +21,5 @@
     - [OpenLedger](gateways/openledger.md)
     - [Rudex](gateways/rudex.md)
     - [CryptoBridge](gateways/cryptobridge.md)
-	- [XBTSX](gateways/xbtsx.md)
+	- [XEONX](gateways/xbtsx.md)
 	- [SparkDEX](gateways/spark.md)

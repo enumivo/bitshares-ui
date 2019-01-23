@@ -832,8 +832,8 @@ class CallOrder {
     }
 
     /*
-    * Assume a USD:BTS market
-    * The call order will always be selling BTS in order to buy USD
+    * Assume a USD:EON market
+    * The call order will always be selling EON in order to buy USD
     * The asset being sold is always the collateral, which is call_price.base.asset_id.
     * The amount being sold depends on how big the debt is, only enough
     * collateral will be sold to cover the debt
