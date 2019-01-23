@@ -9,7 +9,7 @@
  * @returns {string}
  */
 export function getWalletName() {
-    return "Eidos";
+    return "BitShares";
 }
 
 /**
@@ -17,7 +17,7 @@ export function getWalletName() {
  * @returns {string}
  */
 export function getWalletURL() {
-    return "https://wallet.eidos.one";
+    return "https://wallet.bitshares.org";
 }
 
 /**
@@ -27,7 +27,7 @@ export function getWalletURL() {
  */
 export function getFaucet() {
     return {
-        url: "https://faucet.eidos.one/onboarding", 
+        url: "https://faucet.bitshares.eu/onboarding", // 2017-12-infrastructure worker proposal
         show: true,
         editable: false
     };
@@ -66,10 +66,10 @@ export function getDefaultLogin() {
  */
 export function getUnits(chainId = "4018d784") {
     if (chainId === "4018d784")
-        return ["EON", "USD", "CNY", "BTC", "EUR", "GBP"];
+        return ["BTS", "USD", "CNY", "BTC", "EUR", "GBP"];
     else if (chainId === "39f5e2ed") return ["TEST"];
     // unknown chain id: (need to return at least one unit)
-    else return ["EON"];
+    else return ["BTS"];
 }
 
 /**
@@ -79,7 +79,7 @@ export function getUnits(chainId = "4018d784") {
  */
 
 export function getMyMarketsBases() {
-    return ["BTC", "ETH", "EON", "USD", "CNY"];
+    return ["BTC", "ETH", "BTS", "USD", "CNY"];
 }
 
 /**
@@ -91,7 +91,7 @@ export function getMyMarketsQuotes() {
     let tokens = {
         nativeTokens: [
             "BTC",
-            "EON",
+            "BTS",
             "CNY",
             "EUR",
             "GOLD",
@@ -146,31 +146,31 @@ export function getMyMarketsQuotes() {
         sparkTokens: ["ZEPH", "SPARKDEX.ETH", "SPARKDEX.BTC"],
         winTokens: ["WIN.ETC", "WIN.ETH", "WIN.HSR"],
         xbtsxTokens: [
-            "XEONX.STH",
-            "XEONX.POST",
-            "XEONX.DOGE",
-            "XEONX.BTC",
-            "XEONX.LTC",
-            "XEONX.DASH",
-            "XEONX.KEC",
-            "XEONX.BTG",
-            "XEONX.XSPEC",
-            "XEONX.NVC",
-            "XEONX.42",
-            "XEONX.UNI",
-            "XEONX.NMC",
-            "XEONX.WAVES",
-            "XEONX.COF",
-            "XEONX.XRUP",
-            "XEONX.P2P",
-            "XEONX.STEEP"
+            "XBTSX.STH",
+            "XBTSX.POST",
+            "XBTSX.DOGE",
+            "XBTSX.BTC",
+            "XBTSX.LTC",
+            "XBTSX.DASH",
+            "XBTSX.KEC",
+            "XBTSX.BTG",
+            "XBTSX.XSPEC",
+            "XBTSX.NVC",
+            "XBTSX.42",
+            "XBTSX.UNI",
+            "XBTSX.NMC",
+            "XBTSX.WAVES",
+            "XBTSX.COF",
+            "XBTSX.XRUP",
+            "XBTSX.P2P",
+            "XBTSX.STEEP"
         ],
         otherTokens: [
             "BKT",
             "BLOCKPAY",
             "BTWTY",
             "TWENTIX",
-            "EONR",
+            "BTSR",
             "CADASTRAL",
             "CVCOIN",
             "HEMPSWEET",
@@ -201,7 +201,7 @@ export function getMyMarketsQuotes() {
  */
 export function getFeaturedMarkets(quotes = []) {
     return [
-        ["USD", "EON"],
+        ["USD", "BTS"],
         ["USD", "OPEN.BTC"],
         ["USD", "OPEN.USDT"],
         ["USD", "OPEN.ETH"],
@@ -213,7 +213,7 @@ export function getFeaturedMarkets(quotes = []) {
         ["USD", "GDEX.EOS"],
         ["USD", "GDEX.BTO"],
         ["USD", "OPEN.EOSDAC"],
-        ["CNY", "EON"],
+        ["CNY", "BTS"],
         ["CNY", "OPEN.BTC"],
         ["CNY", "USD"],
         ["CNY", "OPEN.ETH"],
@@ -224,60 +224,60 @@ export function getFeaturedMarkets(quotes = []) {
         ["CNY", "GDEX.EOS"],
         ["CNY", "GDEX.BTO"],
         ["CNY", "GDEX.BTM"],
-        ["OPEN.BTC", "EON"],
+        ["OPEN.BTC", "BTS"],
         ["OPEN.BTC", "OPEN.ETH"],
         ["OPEN.BTC", "OPEN.DASH"],
         ["OPEN.BTC", "BLOCKPAY"],
         ["OPEN.BTC", "OPEN.DGD"],
         ["OPEN.BTC", "OPEN.STEEM"],
-        ["EON", "OPEN.ETH"],
-        ["EON", "OPEN.EOS"],
-        ["EON", "PPY"],
-        ["EON", "OPEN.STEEM"],
-        ["EON", "OBITS"],
-        ["EON", "RUBLE"],
-        ["EON", "HERO"],
-        ["EON", "OCT"],
-        ["EON", "SILVER"],
-        ["EON", "GOLD"],
-        ["EON", "BLOCKPAY"],
-        ["EON", "BTWTY"],
-        ["EON", "SMOKE"],
-        ["EON", "GDEX.BTC"],
-        ["EON", "GDEX.ETH"],
-        ["EON", "GDEX.EOS"],
-        ["EON", "GDEX.BTO"],
-        ["EON", "OPEN.EOSDAC"],
+        ["BTS", "OPEN.ETH"],
+        ["BTS", "OPEN.EOS"],
+        ["BTS", "PPY"],
+        ["BTS", "OPEN.STEEM"],
+        ["BTS", "OBITS"],
+        ["BTS", "RUBLE"],
+        ["BTS", "HERO"],
+        ["BTS", "OCT"],
+        ["BTS", "SILVER"],
+        ["BTS", "GOLD"],
+        ["BTS", "BLOCKPAY"],
+        ["BTS", "BTWTY"],
+        ["BTS", "SMOKE"],
+        ["BTS", "GDEX.BTC"],
+        ["BTS", "GDEX.ETH"],
+        ["BTS", "GDEX.EOS"],
+        ["BTS", "GDEX.BTO"],
+        ["BTS", "OPEN.EOSDAC"],
         ["KAPITAL", "OPEN.BTC"],
         ["USD", "OPEN.STEEM"],
         ["USD", "OPEN.MAID"],
         ["OPEN.USDT", "OPEN.BTC"],
         ["OPEN.BTC", "OPEN.MAID"],
-        ["EON", "OPEN.MAID"],
-        ["EON", "OPEN.HEAT"],
-        ["EON", "OPEN.INCENT"],
+        ["BTS", "OPEN.MAID"],
+        ["BTS", "OPEN.HEAT"],
+        ["BTS", "OPEN.INCENT"],
         ["HEMPSWEET", "OPEN.BTC"],
-        ["KAPITAL", "EON"],
-        ["EON", "RUDEX.STEEM"],
+        ["KAPITAL", "BTS"],
+        ["BTS", "RUDEX.STEEM"],
         ["USD", "RUDEX.STEEM"],
-        ["EON", "RUDEX.SBD"],
-        ["EON", "RUDEX.KRM"],
+        ["BTS", "RUDEX.SBD"],
+        ["BTS", "RUDEX.KRM"],
         ["USD", "RUDEX.KRM"],
         ["RUBLE", "RUDEX.GOLOS"],
         ["CNY", "RUDEX.GOLOS"],
         ["RUBLE", "RUDEX.GBG"],
         ["CNY", "RUDEX.GBG"],
-        ["EON", "RUDEX.MUSE"],
-        ["EON", "RUDEX.TT"],
-        ["EON", "RUDEX.SCR"],
-        ["EON", "RUDEX.ETH"],
-        ["EON", "RUDEX.DGB"],
-        ["EON", "XEONX.STH"],
-        ["EON", "XEONX.WAVES"],
-        ["EON", "ZEPH"],
-        ["EON", "HERTZ"],
-        ["EON", "SPARKDEX.BTC"],
-        ["EON", "SPARKDEX.ETH"]
+        ["BTS", "RUDEX.MUSE"],
+        ["BTS", "RUDEX.TT"],
+        ["BTS", "RUDEX.SCR"],
+        ["BTS", "RUDEX.ETH"],
+        ["BTS", "RUDEX.DGB"],
+        ["BTS", "XBTSX.STH"],
+        ["BTS", "XBTSX.WAVES"],
+        ["BTS", "ZEPH"],
+        ["BTS", "HERTZ"],
+        ["BTS", "SPARKDEX.BTC"],
+        ["BTS", "SPARKDEX.ETH"]
     ].filter(a => {
         if (!quotes.length) return true;
         return quotes.indexOf(a[0]) !== -1;
@@ -296,7 +296,7 @@ export function getAssetNamespaces() {
         "WIN.",
         "BRIDGE.",
         "GDEX.",
-        "XEONX.",
+        "XBTSX.",
         "SPARKDEX.",
         "CITADEL."
     ];
@@ -324,7 +324,7 @@ export function allowedGateway(gateway) {
             "WIN",
             "BRIDGE",
             "GDEX",
-            "XEONX",
+            "XBTSX",
             "SPARKDEX",
             "CITADEL"
         ].indexOf(gateway) >= 0

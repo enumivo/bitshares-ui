@@ -4,10 +4,10 @@ import {Signature, ChainStore, PublicKey} from "eidosjs";
 import WalletUnlockActions from "actions/WalletUnlockActions";
 import WalletDb from "stores/WalletDb";
 
-const MSG_HEAD = "-----BEGIN EIDOS SIGNED MESSAGE-----";
+const MSG_HEAD = "-----BEGIN BITSHARES SIGNED MESSAGE-----";
 const MSG_META = "-----BEGIN META-----";
 const MSG_SIGNATURE = "-----BEGIN SIGNATURE-----";
-const MSG_FOOT = "-----END EIDOS SIGNED MESSAGE-----";
+const MSG_FOOT = "-----END BITSHARES SIGNED MESSAGE-----";
 const MSG_SENDER = "account";
 const MSG_PUBLICKEY = "memokey";
 const MSG_BLOCK = "block";
@@ -18,7 +18,7 @@ const MSG_DATE = "timestamp";
  *    - Verify a given message
  *
  *  The message format that is underlying is as follows:
- *  -----BEGIN EIDOS SIGNED MESSAGE-----
+ *  -----BEGIN BITSHARES SIGNED MESSAGE-----
  *  <message from the account>
  *  -----BEGIN META-----
  *  account=<account name>
@@ -27,7 +27,7 @@ const MSG_DATE = "timestamp";
  *  timestamp=<current time>
  *  -----BEGIN SIGNATURE-----
  *  <signature>
- *  -----END EIDOS SIGNED MESSAGE-----
+ *  -----END BITSHARES SIGNED MESSAGE-----
  *
  *    @author Stefan Schiessl <stefan.schiessl@blockchainprojectsbv.com>
  */
@@ -42,7 +42,7 @@ class SignedMessageAction {
      *              meta : Dictionary with the meta data
      *                      account : Account name of the signer
      *                      key : Memo public key of the signer
-     *                      block : Current last irreversible block of the Eidos blockchain
+     *                      block : Current last irreversible block of the bitShares blockchain
      *                      timestamp : Time the message was signed in UTC format
      *              signed : Seperate string that contains all data that will be signed (content + meta)
      *              signature : Signature of the signed data

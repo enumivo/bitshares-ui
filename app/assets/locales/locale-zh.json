@@ -21,7 +21,7 @@
         "create_account": "创建账户",
         "create_new": "创建新账户",
         "deactivate_suspicious_proposals": "Deactivate suspicious proposals",
-        "deposit": "充值EON",
+        "deposit": "充值BTS",
         "deposit_address": "您的充值地址就是您的账户名",
         "deposit_withdraw": "充值/提现",
         "eq_value": "换算值",
@@ -54,7 +54,7 @@
         "intro_text_1": "<b>比特股2.0</b>是一个基于区块链构建的去中心化交易所（通称DEX）。 DEX有着工业级的业务处理能力，能够永不停歇地提供公正和透明的服务，这里有比特股首创的bitCNY,bitUSD等智能货币，用户可以在这里根据自己的需要发行用户定义资产（UIA），也可以买卖通用的数字资产如BTC、ETH等。",
         "intro_text_2": "发行用户定义资产（UIA），也可以买卖通用的数字资产如BTC、ETH等。",
         "intro_text_3": "尽情享受交易的乐趣吧！",
-        "intro_text_4": "<br/>网站：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://eidos.one'>https://eidos.one</a><br/>论坛：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://forum.eidos.one'>https://forum.eidos.one</a><br/>GitHub：<a target='_blank' rel='noopener noreferrer' href='https://github.com/enumivo/eidos-core'>https://github.com/enumivo/eidos-core</a>",
+        "intro_text_4": "<br/>网站：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://bitshares.org'>https://bitshares.org</a><br/>论坛：&nbsp;&nbsp;&nbsp;&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://bitsharestalk.org'>https://bitsharestalk.org</a><br/>GitHub：<a target='_blank' rel='noopener noreferrer' href='https://github.com/bitshares/bitshares-core'>https://github.com/bitshares/bitshares-core</a>",
         "intro_text_title": "欢迎使用比特股去中心化交易所！",
         "login_with": "Login with",
         "market_actions": "市场操作",
@@ -368,7 +368,7 @@
             "workers_short": "预算项目"
         },
         "voting": "投票",
-        "welcome": "欢迎使用 Eidos 系统",
+        "welcome": "欢迎使用 BitShares 系统",
         "whitelist": {
             "add": "加到白名单",
             "add_black": "加到黑名单",
@@ -397,7 +397,7 @@
     },
     "app_init": {
         "browser": "不支持的浏览器",
-        "browser_text": "你使用的浏览器未经过 Eidos 钱包软件的充分测试。强烈建议你备份钱包，并将其导入谷歌 Chrome 浏览器。今后经过我们充分测试后，你或许可以继续使用现在的浏览器。请了解相关风险。",
+        "browser_text": "你使用的浏览器未经过 BitShares 钱包软件的充分测试。强烈建议你备份钱包，并将其导入谷歌 Chrome 浏览器。今后经过我们充分测试后，你或许可以继续使用现在的浏览器。请了解相关风险。",
         "check_latency": "Running latency checks...",
         "check_latency_feedback": "Running latency checks (%(pinged)s/%(totalToPing)s nodes) ...",
         "check_latency_feedback_country": "Latency check in best country (%(pinged)s/%(totalToPing)s nodes)",
@@ -897,10 +897,10 @@
             "create": "创建一个新的预算项目提案",
             "create_text_1": "请填写下表创建新的预算项目。项目将由你当前活跃账户的名义创建，账户必须已取得终身会籍。",
             "create_text_2": "设置参数前请仔细估量，发布后将无法修改。",
-            "daily_pay": "每日支付 (EON)",
+            "daily_pay": "每日支付 (BTS)",
             "date_text": "开始时间应该至少设置在一周以后，以留有足够的时间让用户股东们发现、评估项目并投票。",
             "name_text": "预算项目的名字应该简短明了，比如'目标：改进账户名体系'",
-            "pay_text": "每日支付设定的是每天你希望收到的酬劳，以 EON 计价。目前的最佳实践是设定以美元或人民币计价的工资，并承诺销毁由于 EON 升值导致的溢价部分。只要你的预算项目还是有效的，并且拥有足够的赞成票超过'回购项目'，你就能每日持续收到工资。",
+            "pay_text": "每日支付设定的是每天你希望收到的酬劳，以 BTS 计价。目前的最佳实践是设定以美元或人民币计价的工资，并承诺销毁由于 BTS 升值导致的溢价部分。只要你的预算项目还是有效的，并且拥有足够的赞成票超过'回购项目'，你就能每日持续收到工资。",
             "period": "周期",
             "title": "预算项目",
             "url_text": "你应该提供一个网站、GitHub 文档或者 Google 文档来详细描述你的工作目标和资金使用计划。",
@@ -924,7 +924,7 @@
         "loading": "载入中…",
         "nosync": "区块链数据陈旧，请等待数据完成同步",
         "synced": "已同步",
-        "title": "Eidos",
+        "title": "BitShares",
         "unsynced": "未同步",
         "update_available": "有可用的更新"
     },
@@ -965,7 +965,7 @@
             "support_block": "For DEPOSIT AND WITHDRAWAL issues using \"BitSpark TRANSFER SERVICE\", please contact BitSpark at:"
         },
         "bridge": "桥接服务",
-        "bridge_text": "桥接服务能让你将一种资产转变成另一种资产，比如从 BTC 转换到 EON。",
+        "bridge_text": "桥接服务能让你将一种资产转变成另一种资产，比如从 BTC 转换到 BTS。",
         "calc": "计算中",
         "choose_deposit": "请选择充值的币种",
         "choose_withdraw": "请选择提现的币种",
@@ -1004,7 +1004,7 @@
         "fiat_text": "法币的充值提现服务由 CCEDK 提供。你必须先行在 CCEDK 上进行账户注册。下面是支持的货币：",
         "frozen": "账户 %(account)s 充提服务被冻结",
         "gateway": "网关",
-        "gateway_text": "网关能让你将 Eidos 中的资产与外部资产进行互换，比如 OPEN.BTC 到 BTC。",
+        "gateway_text": "网关能让你将 BitShares 中的资产与外部资产进行互换，比如 OPEN.BTC 到 BTC。",
         "generate": "生成地址",
         "generate_new": "获得新地址",
         "generate_new_memo": "获得新备注内容",
@@ -1080,7 +1080,7 @@
             "coming_soon": "即将上线",
             "min_amount": "最小金额：%(minAmount)s %(symbol)s",
             "min_amount_error": "请输入大于最小金额的数量",
-            "support_block": "请联系 XEON 获取客户支持：",
+            "support_block": "请联系 XBTS 获取客户支持：",
             "under_construction": "Under Construction"
         },
         "your_account": "你的账户"
@@ -1117,7 +1117,7 @@
         "payments_legacy": "Send (legacy)",
         "settings": "设置",
         "showcases": "Spotlight",
-        "title": "Eidos 钱包",
+        "title": "BitShares 钱包",
         "unlock": "解锁钱包",
         "unlock_password": "使用密码登录",
         "unlock_short": "登录",
@@ -1166,7 +1166,7 @@
             "borrow": "Borrow",
             "buy": "Buy"
         },
-        "download": "Download new version of Eidos UI",
+        "download": "Download new version of BitShares UI",
         "excel": "Download .csv file",
         "eye": "Hide Node",
         "eye-striked": "Show Node",
@@ -1277,8 +1277,8 @@
     "migration": {
         "announcement_1": "为了提高浏览器钱包的安全性，我们已经将服务迁移至以下地址。请更新您的书签。",
         "text_1": "检测到本地钱包",
-        "text_2": "请立刻备份钱包，并在 <a href='https://wallet.eidos.one' target='blank' rel='noopener noreferrer'>https://wallet.eidos.one</a>将钱包恢复。请今后使用此地址访问浏览器钱包。感谢您一贯的支持。",
-        "text_3": "请今后使用 <a href='https://wallet.eidos.one' target='blank' rel='noopener noreferrer'>https://wallet.eidos.one</a> 访问浏览器钱包。您当前的账户和密码不变，可以继续使用。",
+        "text_2": "请立刻备份钱包，并在 <a href='https://wallet.bitshares.org' target='blank' rel='noopener noreferrer'>https://wallet.bitshares.org</a>将钱包恢复。请今后使用此地址访问浏览器钱包。感谢您一贯的支持。",
+        "text_3": "请今后使用 <a href='https://wallet.bitshares.org' target='blank' rel='noopener noreferrer'>https://wallet.bitshares.org</a> 访问浏览器钱包。您当前的账户和密码不变，可以继续使用。",
         "title": "迁移提示"
     },
     "modal": {
@@ -1302,7 +1302,7 @@
             "address_generation_error": "Unable to generate address",
             "amount": "充值数量",
             "asset": "Asset",
-            "bts_transfer_description": "It's easy to receive EON from anywhere. As long as EON is sent to your account name it will show up in your wallet. This QR code also contains your account name.",
+            "bts_transfer_description": "It's easy to receive BTS from anywhere. As long as BTS is sent to your account name it will show up in your wallet. This QR code also contains your account name.",
             "cancel": "Cancel",
             "close": "Close",
             "header": "Deposit to %(account_name)s",
@@ -1377,7 +1377,7 @@
             "address_not_valid": "Invalid address",
             "amount": "提现金额",
             "available": "Available: ",
-            "eidos_account": "Send to Eidos Account",
+            "bitshares_account": "Send to Bitshares Account",
             "cancel": "Cancel",
             "cannot_cover": "Insufficient funds!",
             "estimated_value": "Estimated Value",
@@ -1582,7 +1582,7 @@
         "walletDescription": "A bin-file will be automatically created. Please download it and keep in a safe place. You’ll need to upload this file to login to your account in the future.",
         "walletLoginByValue": "Bin-file + Password",
         "walletModelTitle": "By bin-file",
-        "walletNote": "Please keep in mind, that Eidos doesn't store users passwords and couldn't recover users accounts after password loss.",
+        "walletNote": "Please keep in mind, that BitShares doesn't store users passwords and couldn't recover users accounts after password loss.",
         "whyBinFile": "Why do I need a .bin file?"
     },
     "settings": {
@@ -1611,7 +1611,7 @@
         "backup_favoritesbtn": "备份市场收藏夹",
         "backup_favoritestext": "将收藏的市场进行备份，以便在更新后进行恢复。",
         "backup_key": "导入私钥",
-        "backup_legacy": "从EON 0.9.3c 版本客户端导出的JSON钱包文件导入 (.json)",
+        "backup_legacy": "从BTS 0.9.3c 版本客户端导出的JSON钱包文件导入 (.json)",
         "backup_text": "创建钱包备份。",
         "backupcreate_backup": "创建本地钱包备份",
         "backupcreate_brainkey": "创建脑钱包备份",
@@ -1643,7 +1643,7 @@
         "lightTheme": "白色主题",
         "local_wallet": "本地钱包模式",
         "locale": "语言选择",
-        "lookup_text": "查看来自 EON 1.0 的未领取余额",
+        "lookup_text": "查看来自 BTS 1.0 的未领取余额",
         "low_latency": "低延迟",
         "medium_latency": "中延迟",
         "midnightTheme": "午夜黑",
@@ -1702,7 +1702,7 @@
             "title": "Barter"
         },
         "borrow": {
-            "description": "Borrow a BitAsset from the Eidos Blockchain by locking up collateral (e.g. bitUSD, bitCNY, etc.)",
+            "description": "Borrow a BitAsset from the BitShares Blockchain by locking up collateral (e.g. bitUSD, bitCNY, etc.)",
             "title": "Collaterized Debt Position"
         },
         "direct_debit": {
@@ -1718,7 +1718,7 @@
             "title": "Timed transfer"
         },
         "voting": {
-            "description": "Vote on block producers, committee members and worker proposals to influence strategic decisions and advancement of the Eidos Blockchain.",
+            "description": "Vote on block producers, committee members and worker proposals to influence strategic decisions and advancement of the BitShares Blockchain.",
             "title": "Voting"
         }
     },
@@ -1999,7 +1999,7 @@
         "final": "转账后余额",
         "from": "来自",
         "header": "转账详情",
-        "header_subheader": "可以将资产转账给其他 Eidos 帐号持有者",
+        "header_subheader": "可以将资产转账给其他 BitShares 帐号持有者",
         "header_subheader_propose": "Propose to send funds from one %(wallet_name)s account to another. The BY account is the account proposing the transaction.",
         "memo": "备注消息",
         "memo_unlock": "解锁钱包以查看交易备注",
@@ -2075,7 +2075,7 @@
         "brainkey_w1": "警告: 将密钥打印出来，或记录在纸上妥善保存。",
         "brainkey_w2": "任何人获得了你的脑钱包密钥信息将",
         "brainkey_w3": "可以获得钱包中资金的使用权限。",
-        "bts_09_export": "EON 0.9.3c 私钥导出文件 (.json)",
+        "bts_09_export": "BTS 0.9.3c 私钥导出文件 (.json)",
         "cancel": "取消",
         "change": "切换到钱包 %(name)s",
         "change_backup": "你已经修改了密码，强烈建议你创建一个新的备份文件。",
@@ -2121,13 +2121,13 @@
         "generated": "生成的密码",
         "go_get_started": "新手指南",
         "has_wallet": "当你创建第一个账户时，一个钱包也同时被创建，并保存在你的浏览器中。这个钱包使用提供的密码加密，其中包含账户的私钥。在创建完成后，请记得备份钱包！",
-        "import_20_notice1": "请先导入你的EON 2.0+ 钱包备份文件",
+        "import_20_notice1": "请先导入你的BTS 2.0+ 钱包备份文件",
         "import_20_notice2": "(如果你有的话)",
         "import_backup": "导入钱包备份文件 (.bin)",
         "import_backup_choose": "请在对话框中选择备份文件。备份文件不会上传至远端服务器，只在本地浏览器中进行处理。",
         "import_balance": "导入余额",
-        "import_bts": "导入一个 EON 0.9.3c 私钥导出文件",
-        "import_bts1": "从Eidos 0.9.3c导入",
+        "import_bts": "导入一个 BTS 0.9.3c 私钥导出文件",
+        "import_bts1": "从BitShares 0.9.3c导入",
         "import_key_success": "已成功导入 %(count)s 个密钥。",
         "import_keys": "导入私钥",
         "import_keys_tool": "私钥导入工具",

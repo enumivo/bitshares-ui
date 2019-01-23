@@ -747,6 +747,7 @@ class CallOrder {
 
     _getMaxCollateralToSell() {
         /*
+        BSIP38: https://github.com/bitshares/bsips/blob/master/bsip-0038.md
         * max_amount_to_sell = (debt * target_CR - collateral * feed_price)
         * / (target_CR * match_price - feed_price)
         */
@@ -831,8 +832,8 @@ class CallOrder {
     }
 
     /*
-    * Assume a USD:EON market
-    * The call order will always be selling EON in order to buy USD
+    * Assume a USD:BTS market
+    * The call order will always be selling BTS in order to buy USD
     * The asset being sold is always the collateral, which is call_price.base.asset_id.
     * The amount being sold depends on how big the debt is, only enough
     * collateral will be sold to cover the debt

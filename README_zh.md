@@ -1,13 +1,13 @@
-Eidos-UI
+BitShares-UI
 ============
 
-这是一个连接 Eidos API 的轻钱包。Eidos API 由 *witness_node* 程序提供。
+这是一个连接 BitShares API 的轻钱包。BitShares API 由 *witness_node* 程序提供。
 
 这个钱包*将所有的密钥存储在本地浏览器上*，*不会把你的密钥暴露给任何人*，因为它会先在本地对交易签名，再传输到 API 服务器上，由服务器广播至区块链网络。钱包由用户选择的密码加密并储存在浏览器数据库中。
 
 ## 项目依赖
 
-Eidos-UI 依赖于 Node.js v9 以上版本。
+BitShares-UI 依赖于 Node.js v9 以上版本。
 
 在 Linux 和 macOS 上，安装 Node 最简单的方式是用 [NVM](https://github.com/creationix/nvm)。
 
@@ -22,8 +22,8 @@ nvm use v9
 Node 安装完成后，获取项目的源代码：
 
 ```
-git clone https://github.com/enumivo/eidos-ui.git
-cd eidos-ui
+git clone https://github.com/bitshares/bitshares-ui.git
+cd bitshares-ui
 ```
 
 在启动之前，需要先安装 npm 软件包：
@@ -48,7 +48,7 @@ npm start
 
 默认情况下，bitshares-ui 会连接到正常比特股网络。切换到 Xeroc 运行的测试网络也很容易，在设置页面的接入点设置中选择 *Public Testnet Server* 即可。如果你需要创建帐号，你同时需要修改水龙头设置。测试网络的水龙头地址是 https://testnet.bitshares.eu 。
 
-UI 会刷新并连接到测试网络，你可以通过水龙头创建账户并收到一些用于测试的 EON。
+UI 会刷新并连接到测试网络，你可以通过水龙头创建账户并收到一些用于测试的 BTS。
 
 ![image](https://cloud.githubusercontent.com/assets/6890015/22055747/f8e15e68-dd5c-11e6-84cd-692749b578d8.png)
 
@@ -84,9 +84,9 @@ __Mac__
 
 请在 staging 分支上进行工作，并将 PR 提交到该分支中。master 分支只在发布新版本时进行更新。
 
-Eidos UI 团队由[这个工作提案](http://www.bitshares.foundation/workers/2017-08-bill-butler)支持。此提案提供用来支付协调者、赏金和比特股基金的资金。
+Bitshares UI 团队由[这个工作提案](http://www.bitshares.foundation/workers/2017-08-bill-butler)支持。此提案提供用来支付协调者、赏金和比特股基金的资金。
 
-如果你想参与贡献，可以加入 [Telegram 群组](https://t.me/EidosDEX)进行提问并获取帮助。你也可以加入 [Discord 服务器](https://discord.gg/GsjQfAJ)。
+如果你想参与贡献，可以加入 [Telegram 群组](https://t.me/BitSharesDEX)进行提问并获取帮助。你也可以加入 [Discord 服务器](https://discord.gg/GsjQfAJ)。
 
 - 协调者: Bill Butler, @billbutler
 - 主开发者: Sigve Kvalsvik, @sigvek

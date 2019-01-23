@@ -243,7 +243,7 @@ class Assets extends React.Component {
                             ? description.market
                             : coreAsset
                                 ? coreAsset.get("symbol")
-                                : "EON");
+                                : "BTS");
 
                     dataSource.push({
                         symbol: asset.symbol,
@@ -352,7 +352,7 @@ class Assets extends React.Component {
                             ? description.market
                             : coreAsset
                                 ? coreAsset.get("symbol")
-                                : "EON");
+                                : "BTS");
 
                     dataSource.push({
                         symbol: asset.symbol,
@@ -405,7 +405,7 @@ class Assets extends React.Component {
                             ? description.market
                             : coreAsset
                                 ? coreAsset.get("symbol")
-                                : "EON");
+                                : "BTS");
 
                     return (
                         <tr key={asset.id.split(".")[2]}>

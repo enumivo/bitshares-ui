@@ -1,5 +1,5 @@
 {
-  "name": "eidos-keys-bloom-filter",
+  "name": "bitshares-keys-bloom-filter",
   "version": "1.0.0",
   "description": "",
   "main": "bloom_filter_wallet.js",
@@ -12,6 +12,6 @@
   "license": "ISC",
   "devDependencies": {
     "coffee-script": "^1.12.2",
-    "eidosjs": "0.0.1"
+    "eidosjs": "^0.4.10"
   }
 }

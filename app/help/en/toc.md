@@ -1,6 +1,6 @@
 #### Help
 
- * [Eidos](introduction/bitshares.md)
+ * [BitShares](introduction/bitshares.md)
  * [Wallet](introduction/wallets.md)
  * [Backups](introduction/backups.md)
  * [Blockchain](introduction/blockchain.md)

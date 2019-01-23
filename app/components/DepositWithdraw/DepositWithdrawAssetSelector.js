@@ -37,8 +37,8 @@ class DepositWithdrawAssetSelector extends React.Component {
 
         let coinArr = [];
 
-        if (!(this.props.includeEON === false)) {
-            coinArr.push({id: "EON", label: "EON", gateway: ""});
+        if (!(this.props.includeBTS === false)) {
+            coinArr.push({id: "BTS", label: "BTS", gateway: ""});
         }
 
         props.backedCoins.forEach(coin => {
@@ -48,7 +48,7 @@ class DepositWithdrawAssetSelector extends React.Component {
                     return item;
                 })
                 .filter(item => {
-                    if (item.id == "EON") return true;
+                    if (item.id == "BTS") return true;
                     if (include) {
                         return include.includes(item.id);
                     }

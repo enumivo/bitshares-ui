@@ -80,7 +80,9 @@ class Footer extends React.Component {
     }
 
     componentDidMount() {
-        this.downloadLink = "https://eidos.one/download";
+        this.checkNewVersionAvailable.call(this);
+
+        this.downloadLink = "https://bitshares.org/download";
 
         let ensure = this._ensureConnectivity.bind(this);
         ifvisible.on("wakeup", function() {
@@ -104,6 +106,28 @@ class Footer extends React.Component {
             nextState.showAccessSettingsTooltip !==
                 this.state.showAccessSettingsTooltip
         );
+    }
+
+    checkNewVersionAvailable() {
+        if (__ELECTRON__) {
+            fetch(
+                "https://api.github.com/repos/bitshares/bitshares-ui/releases/latest"
+            )
+                .then(res => {
+                    return res.json();
+                })
+                .then(
+                    function(json) {
+                        let oldVersion = String(json.tag_name);
+                        let newVersion = String(APP_VERSION);
+                        let isReleaseCandidate =
+                            APP_VERSION.indexOf("rc") !== -1;
+                        if (!isReleaseCandidate && oldVersion !== newVersion) {
+                            this.setState({newVersion});
+                        }
+                    }.bind(this)
+                );
+        }
     }
 
     downloadVersion() {
@@ -467,7 +491,7 @@ class Footer extends React.Component {
                                     />
                                     {__GIT_BRANCH__ === "staging" ? (
                                         <a
-                                            href={`https://github.com/enumivo/eidos-ui/commit/${version.trim()}`}
+                                            href={`https://github.com/bitshares/bitshares-ui/commit/${version.trim()}`}
                                             className="version"
                                             target="_blank"
                                             rel="noopener noreferrer"

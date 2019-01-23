@@ -323,11 +323,11 @@ class WithdrawModalNew extends React.Component {
         let nAvailableGateways = _getNumberAvailableGateways.call(this);
         let assetAndGateway = selectedAsset && selectedGateway;
 
-        let isEON = false;
+        let isBTS = false;
         if (coreAsset) {
-            if (selectedAsset == coreAsset.get("symbol")) isEON = true;
-        } else if (selectedAsset == "EON") {
-            isEON = true;
+            if (selectedAsset == coreAsset.get("symbol")) isBTS = true;
+        } else if (selectedAsset == "BTS") {
+            isBTS = true;
         }
 
         let canCoverWithdrawal =
@@ -356,7 +356,7 @@ class WithdrawModalNew extends React.Component {
             estimatedValue,
             nAvailableGateways,
             assetAndGateway,
-            isEON,
+            isBTS,
             canCoverWithdrawal,
             fee_asset_types
         };
@@ -542,7 +542,7 @@ class WithdrawModalNew extends React.Component {
                 selectedGateway,
                 gateFee: asset.gateFee,
                 address,
-                isEON: false
+                isBTS: false
             },
             () => {
                 this.setState(this._getAssetPairVariables(), this.updateFee);
@@ -555,8 +555,8 @@ class WithdrawModalNew extends React.Component {
 
         let stateObj = {};
 
-        if (value == "EON") {
-            stateObj = {isEON: true};
+        if (value == "BTS") {
+            stateObj = {isBTS: true};
         }
 
         if (!value) {
@@ -565,7 +565,7 @@ class WithdrawModalNew extends React.Component {
                 selectedGateway: "",
                 addressError: false,
                 fee: 0,
-                isEON: false
+                isBTS: false
             };
         }
 
@@ -708,7 +708,7 @@ class WithdrawModalNew extends React.Component {
             selectedGateway,
             selectedAsset,
             address,
-            isEON,
+            isBTS,
             gateFee,
             memo,
             btsAccount,
@@ -782,7 +782,7 @@ class WithdrawModalNew extends React.Component {
         let descriptor = "";
         let to = "";
 
-        if (isEON) {
+        if (isBTS) {
             descriptor = memo ? new Buffer(memo, "utf-8") : "";
             to = btsAccount.get("id");
         } else {
@@ -812,12 +812,12 @@ class WithdrawModalNew extends React.Component {
         });
     }
 
-    onEONAccountNameChanged(btsAccountName) {
+    onBTSAccountNameChanged(btsAccountName) {
         if (!btsAccountName) this.setState({btsAccount: null});
         this.setState({btsAccountName, btsAccountError: null});
     }
 
-    onEONAccountChanged(btsAccount) {
+    onBTSAccountChanged(btsAccount) {
         this.setState({btsAccount, btsAccountError: null});
     }
 
@@ -887,7 +887,7 @@ class WithdrawModalNew extends React.Component {
             convertedBalance,
             nAvailableGateways,
             assetAndGateway,
-            isEON,
+            isBTS,
             canCoverWithdrawal,
             fee_asset_types,
             quantity,
@@ -937,7 +937,7 @@ class WithdrawModalNew extends React.Component {
 
         let {onFocus, onBlur} = this._getBindingHelpers();
 
-        const shouldDisable = isEON
+        const shouldDisable = isBTS
             ? !quantity || !btsAccount
             : !assetAndGateway ||
               !quantity ||
@@ -998,12 +998,12 @@ class WithdrawModalNew extends React.Component {
                                 include={symbolsToInclude}
                                 selectOnBlur
                                 defaultValue={selectedAsset}
-                                includeEON={false}
+                                includeBTS={false}
                                 usageContext="withdraw"
                             />
                         </div>
 
-                        {!isEON && selectedAsset && !selectedGateway ? (
+                        {!isBTS && selectedAsset && !selectedGateway ? (
                             <Translate content="modal.withdraw.no_gateways" />
                         ) : null}
 
@@ -1025,7 +1025,7 @@ class WithdrawModalNew extends React.Component {
                         </div>
 
                         {/*QUANTITY*/}
-                        {assetAndGateway || isEON ? (
+                        {assetAndGateway || isBTS ? (
                             <div style={{marginBottom: "1em"}}>
                                 {preferredCurrency ? (
                                     <div
@@ -1139,7 +1139,7 @@ class WithdrawModalNew extends React.Component {
                                         }
                                     />
                                 ) : null}
-                                {(assetAndGateway || isEON) &&
+                                {(assetAndGateway || isBTS) &&
                                 !canCoverWithdrawal ? (
                                     <Translate
                                         content="modal.withdraw.cannot_cover"
@@ -1159,7 +1159,7 @@ class WithdrawModalNew extends React.Component {
 
                         {/*ESTIMATED VALUE*/}
                         {/*
-                (assetAndGateway || quantity) && !isEON ?
+                (assetAndGateway || quantity) && !isBTS ?
                 <div>
                 <label className="left-label"><Translate content="modal.withdraw.estimated_value" /> ({preferredCurrency})</label>
                 <ExchangeInput value={userEstimate != null ? userEstimate : estimatedValue} onChange={this.onEstimateChanged.bind(this)} onFocus={onFocus} onBlur={onBlur} />
@@ -1168,7 +1168,7 @@ class WithdrawModalNew extends React.Component {
             */}
 
                         {/*WITHDRAW ADDRESS*/}
-                        {assetAndGateway && !isEON ? (
+                        {assetAndGateway && !isBTS ? (
                             <div style={{marginBottom: "1em"}}>
                                 <label className="left-label">
                                     <Translate
@@ -1220,15 +1220,15 @@ class WithdrawModalNew extends React.Component {
                             </div>
                         ) : null}
 
-                        {isEON ? (
+                        {isBTS ? (
                             <div style={{marginBottom: "1em"}}>
                                 <AccountSelector
                                     label="transfer.to"
                                     accountName={state.btsAccountName}
-                                    onChange={this.onEONAccountNameChanged.bind(
+                                    onChange={this.onBTSAccountNameChanged.bind(
                                         this
                                     )}
-                                    onAccountChanged={this.onEONAccountChanged.bind(
+                                    onAccountChanged={this.onBTSAccountChanged.bind(
                                         this
                                     )}
                                     account={state.btsAccountName}
@@ -1239,7 +1239,7 @@ class WithdrawModalNew extends React.Component {
                         ) : null}
 
                         {/*MEMO*/}
-                        {isEON ? (
+                        {isBTS ? (
                             <div>
                                 <label className="left-label">
                                     <Translate content="modal.withdraw.memo" />
@@ -1253,7 +1253,7 @@ class WithdrawModalNew extends React.Component {
                         ) : null}
 
                         {/*FEE & GATEWAY FEE*/}
-                        {assetAndGateway || isEON ? (
+                        {assetAndGateway || isBTS ? (
                             <div className="double-row">
                                 <div className="no-margin no-padding">
                                     <div

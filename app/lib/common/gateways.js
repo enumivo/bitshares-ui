@@ -89,11 +89,11 @@ export const availableGateways = {
             selected: false
         }
     },
-    XEONX: {
-        id: "XEONX",
-        name: "XEONX",
+    XBTSX: {
+        id: "XBTSX",
+        name: "XBTSX",
         baseAPI: xbtsxAPIs,
-        isEnabled: allowedGateway("XEONX"),
+        isEnabled: allowedGateway("XBTSX"),
         isSimple: true,
         selected: false,
         simpleAssetGateway: false,

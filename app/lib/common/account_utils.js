@@ -2,6 +2,11 @@ import {ChainStore} from "eidosjs";
 import utils from "./utils";
 import counterpart from "counterpart";
 import {estimateFee} from "./trxHelper";
+import {
+    scamAccountsPolo,
+    scamAccountsBittrex,
+    scamAccountsOther
+} from "./scamAccounts";
 
 export default class AccountUtils {
     /**
@@ -100,6 +105,13 @@ export default class AccountUtils {
 
     static isKnownScammer(account) {
         let scamMessage = null;
+        if (scamAccountsPolo.indexOf(account) !== -1) {
+            scamMessage = counterpart.translate("account.polo_scam");
+        } else if (scamAccountsBittrex.indexOf(account) !== -1) {
+            scamMessage = counterpart.translate("account.bittrex_scam");
+        } else if (scamAccountsOther.indexOf(account) !== -1) {
+            scamMessage = counterpart.translate("account.other_scam");
+        }
         return scamMessage;
     }
 }

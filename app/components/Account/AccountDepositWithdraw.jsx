@@ -128,7 +128,7 @@ class AccountDepositWithdraw extends React.Component {
         });
     }
 
-    toggleEONervice(service) {
+    toggleBTService(service) {
         this.setState({
             btService: service
         });
@@ -355,7 +355,7 @@ class AccountDepositWithdraw extends React.Component {
         });
 
         serList.push({
-            name: "XEON (XEONX.X)",
+            name: "XBTS (XBTSX.X)",
             template: (
                 <div className="content-block">
                     <div
@@ -421,7 +421,7 @@ class AccountDepositWithdraw extends React.Component {
                         >
                             <ul className="button-group segmented no-margin">
                                 <li
-                                    onClick={this.toggleEONervice.bind(
+                                    onClick={this.toggleBTService.bind(
                                         this,
                                         "bridge"
                                     )}
@@ -603,7 +603,7 @@ class AccountDepositWithdraw extends React.Component {
             "SPARKDEX",
             "TRADE",
             "BITKAPITAL",
-            "XEONX",
+            "XBTSX",
             "CITADEL"
         ];
         const currentServiceName = serviceNames[activeService];
@@ -804,7 +804,7 @@ export default connect(
                     []
                 ),
                 xbtsxBackedCoins: GatewayStore.getState().backedCoins.get(
-                    "XEONX",
+                    "XBTSX",
                     []
                 ),
                 servicesDown: GatewayStore.getState().down || {}
