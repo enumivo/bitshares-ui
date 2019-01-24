@@ -1,5 +1,5 @@
 // Core asset
-require("file-loader?name=asset-symbols/[name].png!./bts.png");
+require("file-loader?name=asset-symbols/[name].png!./eon.png");
 
 // BitAssets
 require("file-loader?name=asset-symbols/[name].png!./usd.png");
