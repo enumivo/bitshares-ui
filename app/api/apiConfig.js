@@ -131,11 +131,7 @@ export const settingsAPIs = {
             location: {translate: "settings.api_closest"}
         },
         {
-            url: "ws://127.0.0.1:8090",
-            location: "Locally hosted"
-        },
-        {
-            url: "ws://dex.eidos.one:11011",
+            url: "wss://dex.eidos.one",
             region: "Main",
             country: "Main",
             location: "Main",
