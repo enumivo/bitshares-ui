@@ -78,7 +78,7 @@ export function getUnits(chainId = "abd969e3") {
  */
 
 export function getMyMarketsBases() {
-    return ["EON"];
+    return ["EON","USD"];
 }
 
 /**
@@ -89,7 +89,7 @@ export function getMyMarketsBases() {
 export function getMyMarketsQuotes() {
     let tokens = {
         nativeTokens: [
-            "EON", "USD"
+            "EON", "USD", "ENU"
         ],
         bridgeTokens: [],
         gdexTokens: [],
@@ -119,7 +119,12 @@ export function getMyMarketsQuotes() {
  */
 export function getFeaturedMarkets(quotes = []) {
     return [
-        ["USD", "EON"]
+        ["USD", "EON"],
+        ["USD", "ENU"],
+        ["ENU", "EON"],
+        ["ENU", "USD"],
+        ["EON", "ENU"],
+        ["EON", "USD"]
     ].filter(a => {
         if (!quotes.length) return true;
         return quotes.indexOf(a[0]) !== -1;
