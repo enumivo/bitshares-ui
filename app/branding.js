@@ -64,10 +64,9 @@ export function getDefaultLogin() {
  *
  * @returns {[string,string,string,string,string,string]}
  */
-export function getUnits(chainId = "4018d784") {
-    if (chainId === "4018d784")
-        return ["EON", "USD", "CNY", "BTC", "EUR", "GBP"];
-    else if (chainId === "39f5e2ed") return ["TEST"];
+export function getUnits(chainId = "abd969e3") {
+    if (chainId === "abd969e3")
+        return ["EON", "USD"];
     // unknown chain id: (need to return at least one unit)
     else return ["EON"];
 }
