@@ -66,7 +66,7 @@ export function getDefaultLogin() {
  */
 export function getUnits(chainId = "abd969e3") {
     if (chainId === "abd969e3")
-        return ["EON", "USD"];
+        return ["EON", "USD", "ENU"];
     // unknown chain id: (need to return at least one unit)
     else return ["EON"];
 }
@@ -78,7 +78,7 @@ export function getUnits(chainId = "abd969e3") {
  */
 
 export function getMyMarketsBases() {
-    return ["EON","USD"];
+    return ["EON","USD", "ENU"];
 }
 
 /**
