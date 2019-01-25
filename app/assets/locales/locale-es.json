@@ -1073,13 +1073,6 @@
         "withdraw_placeholder": "Por favor introduzca su direcciòn de %(asset)s ",
         "withdraw_summary": "Resumen de retiros",
         "withdraw_to": "Haga clic en el botón de abajo para abrir un %(asset)s retiro",
-        "xbtsx": {
-            "coming_soon": "Próximamente",
-            "min_amount": "Cantidad mínima: %(minAmount)s %(symbol)s",
-            "min_amount_error": "Por favor introduzca número >= mínimo",
-            "support_block": "Para soporte, por favor contacte con XEON en:",
-            "under_construction": "En construcción"
-        },
         "your_account": "Tu cuenta"
     },
     "global": {

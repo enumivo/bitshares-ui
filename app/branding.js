@@ -99,8 +99,6 @@ export function getMyMarketsQuotes() {
         ],
         sparkTokens: [],
         winTokens: [],
-        xbtsxTokens: [
-        ],
         otherTokens: [
             "EON", "USD", "ENU"
         ]

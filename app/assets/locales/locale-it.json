@@ -951,8 +951,7 @@
             "open": "<br/><br/>L'asset %(asset)s è garantito 1:1 da %(backed)s reali e può essere depositato o ritirato usando il servizio di gateway fornito da Openledger.",
             "rudex": "",
             "trade": "<br/><br/>L'asset %(asset)s è garantito 1:1 da %(backed)s reali e può essere depositato o ritirato usando il servizio di gateway fornito da Blocktrades.",
-            "win": "",
-            "xbts": ""
+            "win": ""
         },
         "balance": "Saldo attuale",
         "balance_asset": "Saldo %(asset)s attuale",
@@ -1074,13 +1073,6 @@
         "withdraw_placeholder": "Per favore inserisci il tuo indirizzo %(asset)s",
         "withdraw_summary": "Riepilogo prelievo",
         "withdraw_to": "Clicca il pulsante sotto per iniziare un prelievo di %(asset)s",
-        "xbtsx": {
-            "coming_soon": "Coming soon",
-            "min_amount": "Minimum amount: %(minAmount)s %(symbol)s",
-            "min_amount_error": "Please enter number >= minimum",
-            "support_block": "For support, please contact XEON at:",
-            "under_construction": "Under Construction"
-        },
         "your_account": "Il tuo account"
     },
     "global": {

@@ -24,5 +24,4 @@
     * [Rudex](gateways/rudex.md)
     * [CryptoBridge](gateways/cryptobridge.md)
     * [Winex](gateways/winex.md)
-	* [Xbts](gateways/xbtsx.md)
 	* [SparkDEX](gateways/spark.md)
