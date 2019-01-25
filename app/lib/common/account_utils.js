@@ -3,7 +3,6 @@ import utils from "./utils";
 import counterpart from "counterpart";
 import {estimateFee} from "./trxHelper";
 import {
-    scamAccountsPolo,
     scamAccountsOther
 } from "./scamAccounts";
 
