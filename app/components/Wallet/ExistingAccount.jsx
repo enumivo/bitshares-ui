@@ -98,7 +98,7 @@ class ExistingAccountOptions extends Component {
                         <br />
                         <br />
                         <Link to="existing-account/import-keys">
-                            <Translate content="wallet.import_bts1" />
+                            <Translate content="wallet.import_eon1" />
                         </Link>
                         <br />
                         <br />

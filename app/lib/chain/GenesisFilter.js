@@ -1,15 +1,15 @@
 import {hash, key} from "eidosjs";
 
-var bts_genesiskeys_bloom_url = undefined;
+var eon_genesiskeys_bloom_url = undefined;
 try {
-    var url = require("file-loader?name=bts_genesiskeys_bloom_[sha1:hash:hex:7].dat!assets/bts_genesiskeys_bloom.dat");
+    var url = require("file-loader?name=eon_genesiskeys_bloom_[sha1:hash:hex:7].dat!assets/eon_genesiskeys_bloom.dat");
     if (url.indexOf("3cee441") === -1)
-        throw new Error("Incorrect hash: bts_genesiskeys_bloom.dat");
-    bts_genesiskeys_bloom_url = url;
+        throw new Error("Incorrect hash: eon_genesiskeys_bloom.dat");
+    eon_genesiskeys_bloom_url = url;
 } catch (e) {
     // webpack deployment exception (not run time)
     console.log(
-        "WARN: Will be unable to filter EON 1.0 wallet imports, did not find assets/bts_genesiskeys_bloom.dat",
+        "WARN: Will be unable to filter EON 1.0 wallet imports, did not find assets/eon_genesiskeys_bloom.dat",
         e
     );
 }
@@ -31,7 +31,7 @@ export default class GenesisFilter {
 
     /** Was a bloom file deployed?  This does not try to load it from the server. */
     isAvailable() {
-        return bts_genesiskeys_bloom_url !== undefined;
+        return eon_genesiskeys_bloom_url !== undefined;
     }
 
     init(done) {
@@ -61,7 +61,7 @@ export default class GenesisFilter {
         xhr.onerror = () => {
             console.error("xhr.onerror", e);
         };
-        xhr.open("GET", bts_genesiskeys_bloom_url);
+        xhr.open("GET", eon_genesiskeys_bloom_url);
         xhr.send();
     }
 

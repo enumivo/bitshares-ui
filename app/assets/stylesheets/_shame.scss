@@ -352,7 +352,7 @@ select {
     line-height: normal !important;
 }
 
-select.bts-select {
+select.eon-select {
     border-radius: 5px;
     cursor: pointer;
     // height: 2em;
@@ -366,12 +366,12 @@ select.bts-select {
     appearance: menulist;
 }
 
-select.bts-select.full-width {
+select.eon-select.full-width {
     width: 100%;
     max-width: 100%;
 }
 
-.windows select.bts-select {
+.windows select.eon-select {
     height: 2.35em;
 }
 

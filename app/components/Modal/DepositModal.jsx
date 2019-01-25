@@ -415,7 +415,7 @@ class DepositModalContent extends DecimalChecker {
                             </h2>
                             <Translate
                                 component="h6"
-                                content="modal.deposit.bts_transfer_description"
+                                content="modal.deposit.eon_transfer_description"
                             />
                         </div>
                     ) : null}

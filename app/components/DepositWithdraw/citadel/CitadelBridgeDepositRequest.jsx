@@ -294,8 +294,8 @@ class CitadelBridgeDepositRequest extends React.Component {
                 );
 
                 // determine which mappings we will display for deposits and withdrawals
-                let allowed_mappings_for_deposit = {}; // all non-bts to bts
-                let allowed_mappings_for_withdraw = {}; // all bts to non-bts
+                let allowed_mappings_for_deposit = {}; // all non-eon to eon
+                let allowed_mappings_for_withdraw = {}; // all eon to non-eon
                 trading_pairs.forEach(pair => {
                     let input_coin_info = coins_by_type[pair.inputCoinType];
                     let output_coin_info = coins_by_type[pair.outputCoinType];

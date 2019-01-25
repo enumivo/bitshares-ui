@@ -78,8 +78,8 @@ class WithdrawModalNew extends React.Component {
             convertedBalance: "",
             estimatedValue: "",
             options_is_valid: false,
-            btsAccountName: "",
-            btsAccount: ""
+            eonAccountName: "",
+            eonAccount: ""
         };
 
         this.handleQrScanSuccess = this.handleQrScanSuccess.bind(this);
@@ -363,7 +363,7 @@ class WithdrawModalNew extends React.Component {
     }
 
     _getAvailableAssets(state = this.state) {
-        let btsAccount = this.props.account;
+        let eonAccount = this.props.account;
         const {feeStatus} = state;
         function hasFeePoolBalance(id) {
             if (feeStatus[id] === undefined) return true;
@@ -376,10 +376,10 @@ class WithdrawModalNew extends React.Component {
         }
 
         let fee_asset_types = [];
-        if (!(btsAccount && btsAccount.get("balances"))) {
+        if (!(eonAccount && eonAccount.get("balances"))) {
             return {fee_asset_types};
         }
-        let account_balances = btsAccount.get("balances").toJS();
+        let account_balances = eonAccount.get("balances").toJS();
         fee_asset_types = Object.keys(account_balances).sort(utils.sortID);
         for (let key in account_balances) {
             let asset = ChainStore.getObject(key);
@@ -476,7 +476,7 @@ class WithdrawModalNew extends React.Component {
     }
 
     _updateFee(state = this.state) {
-        let btsAccount = this.props.account;
+        let eonAccount = this.props.account;
         let {fee_asset_id} = state;
         const {fee_asset_types} = this._getAvailableAssets(state);
         if (
@@ -486,7 +486,7 @@ class WithdrawModalNew extends React.Component {
             fee_asset_id = fee_asset_types[0];
         }
 
-        if (!btsAccount) return null;
+        if (!eonAccount) return null;
         let memoContent =
             state.selectedAsset.toLowerCase() +
             ":" +
@@ -494,7 +494,7 @@ class WithdrawModalNew extends React.Component {
             (state.memo ? ":" + state.memo : "");
 
         checkFeeStatusAsync({
-            accountID: btsAccount.get("id"),
+            accountID: eonAccount.get("id"),
             feeID: fee_asset_id,
             options: ["price_per_kbyte"],
             data: {
@@ -711,7 +711,7 @@ class WithdrawModalNew extends React.Component {
             isEON,
             gateFee,
             memo,
-            btsAccount,
+            eonAccount,
             feeAmount
         } = this.state;
 
@@ -784,7 +784,7 @@ class WithdrawModalNew extends React.Component {
 
         if (isEON) {
             descriptor = memo ? new Buffer(memo, "utf-8") : "";
-            to = btsAccount.get("id");
+            to = eonAccount.get("id");
         } else {
             assetName = gatewayStatus.useFullAssetName
                 ? selectedGateway.toLowerCase() + "." + assetName
@@ -812,13 +812,13 @@ class WithdrawModalNew extends React.Component {
         });
     }
 
-    onEONAccountNameChanged(btsAccountName) {
-        if (!btsAccountName) this.setState({btsAccount: null});
-        this.setState({btsAccountName, btsAccountError: null});
+    onEONAccountNameChanged(eonAccountName) {
+        if (!eonAccountName) this.setState({eonAccount: null});
+        this.setState({eonAccountName, eonAccountError: null});
     }
 
-    onEONAccountChanged(btsAccount) {
-        this.setState({btsAccount, btsAccountError: null});
+    onEONAccountChanged(eonAccount) {
+        this.setState({eonAccount, eonAccountError: null});
     }
 
     _renderStoredAddresses() {
@@ -892,7 +892,7 @@ class WithdrawModalNew extends React.Component {
             fee_asset_types,
             quantity,
             address,
-            btsAccount,
+            eonAccount,
             coinToGatewayMapping
         } = this.state;
         let symbolsToInclude = [];
@@ -938,7 +938,7 @@ class WithdrawModalNew extends React.Component {
         let {onFocus, onBlur} = this._getBindingHelpers();
 
         const shouldDisable = isEON
-            ? !quantity || !btsAccount
+            ? !quantity || !eonAccount
             : !assetAndGateway ||
               !quantity ||
               !address ||
@@ -1224,16 +1224,16 @@ class WithdrawModalNew extends React.Component {
                             <div style={{marginBottom: "1em"}}>
                                 <AccountSelector
                                     label="transfer.to"
-                                    accountName={state.btsAccountName}
+                                    accountName={state.eonAccountName}
                                     onChange={this.onEONAccountNameChanged.bind(
                                         this
                                     )}
                                     onAccountChanged={this.onEONAccountChanged.bind(
                                         this
                                     )}
-                                    account={state.btsAccountName}
+                                    account={state.eonAccountName}
                                     size={60}
-                                    error={state.btsAccountError}
+                                    error={state.eonAccountError}
                                 />
                             </div>
                         ) : null}

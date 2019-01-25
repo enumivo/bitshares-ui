@@ -70,7 +70,7 @@ export default class AccountSelect extends React.Component {
                 key={selected_account}
                 defaultValue={selected_account}
                 className={
-                    "form-control account-select bts-select " +
+                    "form-control account-select eon-select " +
                     (this.props.className || "")
                 }
                 onChange={this._onAccountChange.bind(this)}

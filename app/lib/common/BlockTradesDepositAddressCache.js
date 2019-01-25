@@ -1,6 +1,6 @@
 import WalletDb from "stores/WalletDb";
 import ls from "common/localStorage";
-const ss = new ls("__bts__");
+const ss = new ls("__eon__");
 
 class BlockTradesDepositAddressCache {
     constructor() {

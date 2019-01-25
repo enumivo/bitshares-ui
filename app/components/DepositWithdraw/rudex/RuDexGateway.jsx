@@ -127,7 +127,7 @@ class RuDexGateway extends React.Component {
                                 />:{" "}
                             </label>
                             <select
-                                className="external-coin-types bts-select"
+                                className="external-coin-types eon-select"
                                 onChange={this.onSelectCoin.bind(this)}
                                 value={activeCoin}
                             >

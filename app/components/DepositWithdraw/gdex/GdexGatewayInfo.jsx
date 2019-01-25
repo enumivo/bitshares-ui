@@ -20,7 +20,7 @@ class GdexGatewayInfo extends React.Component {
         account: ChainTypes.ChainAccount,
         issuer_account: ChainTypes.ChainAccount,
         gateway: PropTypes.string,
-        btsCoin: ChainTypes.ChainAsset,
+        eonCoin: ChainTypes.ChainAsset,
         memo_rule: PropTypes.string
     };
 
@@ -100,7 +100,7 @@ class GdexGatewayInfo extends React.Component {
         // Get address from server side
         var _this = this;
         requestDepositAddress({
-            btsAssetId: coin.innerAssetId,
+            eonAssetId: coin.innerAssetId,
             outAssetId: coin.outerAssetId,
             uid: user_id,
             userAccount: user_name
@@ -206,9 +206,9 @@ class GdexGatewayInfo extends React.Component {
             !this.props.coin
         )
             return emptyRow;
-        const {coin, btsCoin} = this.props;
+        const {coin, eonCoin} = this.props;
         // asset is not loaded
-        if (!btsCoin) return emptyRow;
+        if (!eonCoin) return emptyRow;
         let receive_address = this.state.receive_address;
         let qrcode = this.state.qrcode;
         let withdraw_modal_id = this.getWithdrawModalId();
@@ -235,7 +235,7 @@ class GdexGatewayInfo extends React.Component {
         let account_balances_object = this.props.account.get("balances");
 
         if (account_balances_object)
-            balance = account_balances_object.toJS()[btsCoin.get("id")];
+            balance = account_balances_object.toJS()[eonCoin.get("id")];
 
         if (this.props.action === "deposit") {
             return (

@@ -693,7 +693,7 @@ class AccountDepositWithdraw extends React.Component {
                                 />
                                 <select
                                     onChange={this.onSetService.bind(this)}
-                                    className="bts-select"
+                                    className="eon-select"
                                     value={activeService}
                                 >
                                     {options}

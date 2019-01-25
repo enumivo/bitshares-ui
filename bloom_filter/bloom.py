@@ -3,8 +3,6 @@
 # Matching exmaple:
 # ./bloom.py EON87mopaNqLDjT1BvzqQR3QjWzWSTgkWnMcwt5sqxHuavCBi1s3m
 
-# Sample program by theoriticalbts used to create js implementation
-
 import hashlib
 import sys
 
