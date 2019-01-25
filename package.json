@@ -1,15 +1,9 @@
 {
-    "name": "Eidos2-light",
-    "version": "2.0.181212",
+    "name": "Eidos-light",
+    "version": "0.0.1",
     "description": "Advanced wallet interface for the Eidos financial blockchain.",
-    "homepage": "https://github.com/bitshares/bitshares-ui",
-    "author": "Sigve Kvalsvik <kvalsvik.crypto@gmail.com>",
-    "contributors": [
-        "Eidos UI Worker",
-        "James Calfee",
-        "Dan Larimer",
-        "Valentine Zavgorodnev <valentine.zavgorodnev@gmail.com>"
-    ],
+    "homepage": "https://github.com/enumivo/eidos-ui",
+    "author": "Quattro Cento <quattrocento1@hotmail.com>",
     "license": "MIT",
     "engines": {
         "node": ">=10.x",
