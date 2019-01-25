@@ -2,7 +2,7 @@
 
  * [ Giriş ](index.md)
  * [Terimler Listesi](glossary.md)
- * [Eidos](introduction/bitshares.md)
+ * [Eidos](introduction/eidos.md)
  * [Cüzdan](introduction/wallets.md)
  * [Yedeklemeler](introduction/backups.md)
  * [Blokzinciri](introduction/blockchain.md)

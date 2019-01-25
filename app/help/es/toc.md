@@ -2,7 +2,7 @@
 
  * [Introducción](index.md)
  * [Glosario](glossary.md)
- * [Eidos](introduction/bitshares.md)
+ * [Eidos](introduction/eidos.md)
  * [Billetera](introduction/wallets.md)
  * [Backups](introduction/backups.md)
  * [Blockchain](introduction/blockchain.md)

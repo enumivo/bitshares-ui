@@ -17,10 +17,10 @@ echo TRAVIS_PULL_REQUEST_BRANCH=$TRAVIS_PULL_REQUEST_BRANCH
 
 if [[ "$unamestr" == 'Linux' && -n $TRAVIS_TAG && $TRAVIS_BRANCH =~ [2-9]\.[0-9]\.[0-9]{6}$ ]]
 then
-    ## wallet.bitshares.org subdomain (independent repo)
+    ## wallet.eidos.one subdomain (independent repo)
     echo "Pushing new wallet subdomain repo"
-    git clone https://github.com:${GITHUB_TOKEN}@github.com/${WALLET_REPO} $TRAVIS_BUILD_DIR/wallet.bitshares.org
-    cd $TRAVIS_BUILD_DIR/wallet.bitshares.org
+    git clone https://github.com:${GITHUB_TOKEN}@github.com/${WALLET_REPO} $TRAVIS_BUILD_DIR/wallet.eidos.one
+    cd $TRAVIS_BUILD_DIR/wallet.eidos.one
     git checkout gh-pages
     rm -rf ./*
     git checkout ./CNAME
@@ -32,10 +32,10 @@ fi
 
 if [[ "$unamestr" == 'Linux' && -n $TRAVIS_TAG && $TRAVIS_BRANCH =~ .+-rc[1-9]$ ]]
 then
-    ## staging.bitshares.org subdomain (independent repo)
+    ## staging.eidos.one subdomain (independent repo)
     echo "Pushing new staging subdomain repo"
-    git clone https://github.com:${GITHUB_TOKEN}@github.com/${STAGING_REPO} $TRAVIS_BUILD_DIR/staging.bitshares.org
-    cd $TRAVIS_BUILD_DIR/staging.bitshares.org
+    git clone https://github.com:${GITHUB_TOKEN}@github.com/${STAGING_REPO} $TRAVIS_BUILD_DIR/staging.eidos.one
+    cd $TRAVIS_BUILD_DIR/staging.eidos.one
     rm -rf ./*
     git checkout ./CNAME
     cp -Rv $TRAVIS_BUILD_DIR/build/hash-history/* .
@@ -46,10 +46,10 @@ fi
 
 if [ $unamestr = 'Linux' ] && [ $TRAVIS_BRANCH = 'develop' ] && [ -z $TRAVIS_PULL_REQUEST_BRANCH ]
 then
-    ## develop.bitshares.org subdomain (independent repo)
+    ## develop.eidos.one subdomain (independent repo)
     echo "Pushing new develop subdomain repo"
-    git clone https://github.com:${GITHUB_TOKEN}@github.com/${DEVELOP_REPO} $TRAVIS_BUILD_DIR/develop.bitshares.org
-    cd $TRAVIS_BUILD_DIR/develop.bitshares.org
+    git clone https://github.com:${GITHUB_TOKEN}@github.com/${DEVELOP_REPO} $TRAVIS_BUILD_DIR/develop.eidos.one
+    cd $TRAVIS_BUILD_DIR/develop.eidos.one
     rm -rf ./*
     git checkout ./CNAME
     cp -Rv $TRAVIS_BUILD_DIR/build/hash-history/* .

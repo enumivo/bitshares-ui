@@ -320,8 +320,8 @@ class CitadelBridgeDepositRequest extends React.Component {
                             ) != -1
                         ) {
                             if (
-                                input_coin_info.walletType != "bitshares2" &&
-                                output_coin_info.walletType == "bitshares2"
+                                input_coin_info.walletType != "eidos2" &&
+                                output_coin_info.walletType == "eidos2"
                             ) {
                                 allowed_mappings_for_deposit[
                                     pair.inputCoinType

@@ -13,8 +13,8 @@ You can chat with other member of the Eidos community in real time at:
 ### Developers
 If you are a software developer, you may contribute via a bounty system at:
 
-- [Github UI](https://github.com/bitshares/bitshares-ui)
-- [Github Core](https://github.com/bitshares/bitshares-core) 
+- [Github UI](https://github.com/enumivo/eidos-ui)
+- [Github Core](https://github.com/enumivo/eidos-core) 
 
 ## Introduction
 Welcome to the worlds fastest decentralized exchange (The DEX).

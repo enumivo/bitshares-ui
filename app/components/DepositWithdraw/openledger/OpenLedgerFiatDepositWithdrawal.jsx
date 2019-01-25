@@ -244,7 +244,7 @@ class OpenLedgerFiatDepositWithdrawal extends React.Component {
             jsonrpc: "2.0",
             id: 1,
             method: "isValidatedForFiat",
-            params: {bitsharesAccountName: this.props.account.get("name")}
+            params: {eidosAccountName: this.props.account.get("name")}
         };
         let is_validated_promise = fetch(this.props.rpc_url, {
             method: "POST",

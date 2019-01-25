@@ -747,7 +747,6 @@ class CallOrder {
 
     _getMaxCollateralToSell() {
         /*
-        BSIP38: https://github.com/bitshares/bsips/blob/master/bsip-0038.md
         * max_amount_to_sell = (debt * target_CR - collateral * feed_price)
         * / (target_CR * match_price - feed_price)
         */

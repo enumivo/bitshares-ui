@@ -6,7 +6,7 @@ Eidos 2.0 - это платформа Финансовых Смарт-Контр
 
 ## Введение
 
-- [Eidos](introduction/bitshares.md)
+- [Eidos](introduction/eidos.md)
 - [Кошелек](introduction/wallets.md)
 - [Резервные копии](introduction/backups.md)
 - [Блокчейн](introduction/blockchain.md)

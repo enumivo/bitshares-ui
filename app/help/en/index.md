@@ -9,7 +9,7 @@ This help section gives a brief overview and describes the most basic concepts
 of this application.
 
 ## Introduction 
- * [Eidos](introduction/bitshares.md)
+ * [Eidos](introduction/eidos.md)
  * [Wallet](introduction/wallets.md)
  * [Backups](introduction/backups.md)
  * [Blockchain](introduction/blockchain.md)

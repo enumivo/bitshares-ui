@@ -1,6 +1,6 @@
 #### Содержание
 
-- [Eidos](introduction/bitshares.md)
+- [Eidos](introduction/eidos.md)
 - [Кошелек](introduction/wallets.md)
 - [Резервные копии](introduction/backups.md)
 - [Блокчейн](introduction/blockchain.md)

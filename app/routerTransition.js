@@ -380,7 +380,7 @@ class RouterTransitioner {
 
     /**
      *
-     * @param apiNodeUrl the url of the target node, e.g. wss://eu.nodes.bitshares.ws
+     * @param apiNodeUrl the url of the target node, e.g. wss://dex.eidos.one
      * @returns {boolean} true the security matches, meaning that we either have:
      *                         - user connected via http to the wallet and target node is ws:// or wss://
      *                         - user connected via https and target node is wss://
