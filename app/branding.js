@@ -102,6 +102,7 @@ export function getMyMarketsQuotes() {
         xbtsxTokens: [
         ],
         otherTokens: [
+            "EON", "USD", "ENU"
         ]
     };
 
