@@ -19,6 +19,5 @@
 - [Короткая продажа BitAssets](dex/shorting.md)
 - Шлюзы 
     - [OpenLedger](gateways/openledger.md)
-    - [Rudex](gateways/rudex.md)
     - [CryptoBridge](gateways/cryptobridge.md)
 	- [SparkDEX](gateways/spark.md)

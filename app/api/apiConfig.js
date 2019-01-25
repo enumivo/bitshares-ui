@@ -21,12 +21,6 @@ export const openledgerAPIs = {
     RPC_URL: "https://openledger.info/api/"
 };
 
-export const rudexAPIs = {
-    BASE: "https://gateway.rudex.org/api/v0_1",
-    COINS_LIST: "/coins",
-    NEW_DEPOSIT_ADDRESS: "/new-deposit-address"
-};
-
 export const bitsparkAPIs = {
     BASE: "https://dex-api.bitspark.io/api/v1",
     COINS_LIST: "/coins",
@@ -53,16 +47,6 @@ export const widechainAPIs = {
     WITHDRAW_HISTORY: "/latelyWithdraw",
     TRADING_PAIRS: "/trading-pairs",
     DEPOSIT_HISTORY: "/latelyRecharge"
-};
-
-export const citadelAPIs = {
-    BASE: "https://citadel.li/trade",
-    COINS_LIST: "/coins",
-    ACTIVE_WALLETS: "/active-wallets",
-    TRADING_PAIRS: "/trading-pairs",
-    DEPOSIT_LIMIT: "/deposit-limits",
-    ESTIMATE_OUTPUT: "/estimate-output-amount",
-    ESTIMATE_INPUT: "/estimate-input-amount"
 };
 
 export const gdex2APIs = {

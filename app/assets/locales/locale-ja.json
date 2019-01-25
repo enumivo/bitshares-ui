@@ -949,7 +949,6 @@
             "bridge": "<br/><br/>The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by CryptoBridge.",
             "gdex": "<br/><br/>The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by GDex.",
             "open": "<br/><br/>%(asset)sアセットは実際の%(backed)sと1：1に対応し、Openledgerによって提供されるゲートウェイサービスによって入出金が可能です。",
-            "rudex": "",
             "trade": "<br/><br/>%(asset)sアセットは実際の%(backed)sと1：1に対応し、Blocktradesによって提供されるゲートウェイサービスによって入出金が可能です。",
             "win": ""
         },
@@ -966,13 +965,6 @@
         "calc": "計算中",
         "choose_deposit": "入金したいコインを選択してください",
         "choose_withdraw": "出金したいコインを選択してください",
-        "citadel": {
-            "coming_soon": "近日公開",
-            "min_amount": "最低数量: %(minAmount)s %(symbol)s",
-            "min_amount_error": "数字を入力してください >= minimum",
-            "support_block": "サポートについては、citadel.li までご連絡ください。:",
-            "under_construction": "工事中"
-        },
         "contact_TRADE": "Blocktradesに連絡する",
         "convert": "内部変換",
         "convert_coin": "%(coin)s (%(symbol)s) に変換",
@@ -1030,13 +1022,6 @@
         "receive_account": "受け取りアカウント:",
         "recent_deposit": "最近の入金",
         "recent_withdraw": "最近の出金",
-        "rudex": {
-            "coming_soon": "近日公開",
-            "min_amount": "最低数量: %(minAmount)s %(symbol)s",
-            "min_amount_error": "数字を入力してください >= minimum",
-            "support_block": "サポートについては、RuDEXまでご連絡ください。:",
-            "under_construction": "工事中"
-        },
         "scan_qr": "QRをスキャン",
         "service": "転送サービス",
         "status": "ステータス",
@@ -1047,9 +1032,7 @@
         "title": "入金 & 出金",
         "transaction_history_info": " %(amount)s %(assetName)s with trancation id: %(txid)s ",
         "unavailable": "このアセットのゲートウェイサービスが現在停止しています。後でやり直してください",
-        "unavailable_CITADEL": "The Citadel Bridge is down or not responding",
         "unavailable_OPEN": "OpenLedgerゲートウェイがダウンしているか、応答していません",
-        "unavailable_RUDEX": "RuDEXゲートウェイがダウンしているか、応答していません",
         "unavailable_TRADE": "Blocktradesブリッジがダウンしているか、応答していません",
         "unavailable_bridge": "このアセットのブリッジサービスは現在停止しています。後でやり直してください",
         "use_copy_button": "アドレス、またはメモをコピーするにはコピーボタンを使用してください。",

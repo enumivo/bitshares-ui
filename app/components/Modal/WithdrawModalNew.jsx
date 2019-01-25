@@ -30,7 +30,6 @@ import {
     _getCoinToGatewayMapping
 } from "lib/common/assetGatewayMixin";
 import {
-    updateGatewayBackers,
     getGatewayStatusByAsset
 } from "common/gatewayUtils";
 import {availableGateways} from "common/gateways";
@@ -202,9 +201,6 @@ class WithdrawModalNew extends React.Component {
         let fullSymbol = selectedGateway
             ? selectedGateway + "." + selectedAsset
             : selectedAsset;
-
-        if (selectedGateway === "RUDEX" && selectedAsset === "PPY")
-            fullSymbol = "PPY";
 
         let withdrawalCurrencyBalance = 0;
         let withdrawalCurrencyBalanceId = null;

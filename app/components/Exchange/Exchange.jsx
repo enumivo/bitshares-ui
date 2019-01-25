@@ -36,7 +36,6 @@ import SimpleDepositBlocktradesBridge from "../Dashboard/SimpleDepositBlocktrade
 import {Notification} from "bitshares-ui-style-guide";
 import PriceAlert from "./PriceAlert";
 import counterpart from "counterpart";
-import {updateGatewayBackers} from "common/gatewayUtils";
 
 class Exchange extends React.Component {
     static propTypes = {
@@ -480,7 +479,6 @@ class Exchange extends React.Component {
             capture: false,
             passive: true
         });
-        // updateGatewayBackers();
         this._checkFeeStatus();
     }
 

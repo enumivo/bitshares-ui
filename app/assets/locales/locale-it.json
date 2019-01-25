@@ -949,7 +949,6 @@
             "bridge": "<br/><br/>The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by CryptoBridge.",
             "gdex": "<br/><br/>The %(asset)s asset is backed 1:1 by real %(backed)s and can be deposited or withdrawn using the gateway service provided by GDex.",
             "open": "<br/><br/>L'asset %(asset)s è garantito 1:1 da %(backed)s reali e può essere depositato o ritirato usando il servizio di gateway fornito da Openledger.",
-            "rudex": "",
             "trade": "<br/><br/>L'asset %(asset)s è garantito 1:1 da %(backed)s reali e può essere depositato o ritirato usando il servizio di gateway fornito da Blocktrades.",
             "win": ""
         },
@@ -966,13 +965,6 @@
         "calc": "Calcolo in corso",
         "choose_deposit": "Per favore seleziona la valuta che vuoi depositare",
         "choose_withdraw": "Per favore seleziona la valuta che vuoi prelevare",
-        "citadel": {
-            "coming_soon": "Prossimamente",
-            "min_amount": "Minimum amount: %(minAmount)s %(symbol)s",
-            "min_amount_error": "Per favore inserisci un numero >= minimo",
-            "support_block": "Per supporto, contatta citadel.li a:",
-            "under_construction": "Under Construction"
-        },
         "contact_TRADE": "Contact Blocktrades",
         "convert": "Quantità minima: %(minAmount)s %(symbol)s",
         "convert_coin": "Converti in %(coin)s (%(symbol)s)",
@@ -1030,13 +1022,6 @@
         "receive_account": "Account ricevente:",
         "recent_deposit": "Depositi recenti",
         "recent_withdraw": "Prelievi recenti",
-        "rudex": {
-            "coming_soon": "Prossimamente",
-            "min_amount": "Quantità minima: %(minAmount)s %(symbol)s",
-            "min_amount_error": "Per favore inserisci un numero >= minimo",
-            "support_block": "Per supporto, contatta RuDEX a:",
-            "under_construction": "Under Construction"
-        },
         "scan_qr": "Scandisci QR",
         "service": "Servizio di Trasferimento",
         "status": "Status",
@@ -1047,9 +1032,7 @@
         "title": "Deposito & Prelievo",
         "transaction_history_info": " %(amount)s %(assetName)s with trancation id: %(txid)s ",
         "unavailable": "Il servizio di gateway per questo asset non è al momento disponibile, riprova più tardi",
-        "unavailable_CITADEL": "The Citadel Bridge is down or not responding",
         "unavailable_OPEN": "Il Gateway OpenLedger non è disponibile o non risponde",
-        "unavailable_RUDEX": "Il Gateway RuDEX non è disponibile o non risponde",
         "unavailable_TRADE": "Il Bridge Blocktrades non è disponibile o non risponde",
         "unavailable_bridge": "Il servizio di bridge per questo asset non è al momento disponibile, riprova più tardi",
         "use_copy_button": "PLEASE USE COPY BUTTON TO MAKE COPY OF ADDRESS OR MEMO ON THIS PAGE",

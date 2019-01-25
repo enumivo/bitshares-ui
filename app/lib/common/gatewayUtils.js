@@ -8,31 +8,10 @@ export function getGatewayName(asset) {
         return counterpart.translate("exchange.native");
     }
 
-    let prefix =
-        asset.get("symbol") === "PPY"
-            ? "RUDEX"
-            : asset.get("symbol").split(".")[0];
-
-    let assetName =
-        asset.get("symbol") === "PPY" ? "RUDEX.PPY" : asset.get("symbol");
-
-    if (hasGatewayPrefix(assetName)) {
-        return availableGateways[prefix].name;
-    }
     return null;
 }
 
 export function hasGatewayPrefix(name) {
-    let prefix = "";
-    if (name === "PPY") {
-        prefix = "RUDEX";
-    } else {
-        prefix = name.split(".")[0];
-    }
-
-    if (gatewayPrefixes.indexOf(prefix) !== -1) {
-        return true;
-    }
     return false;
 }
 
@@ -71,7 +50,6 @@ export function getIntermediateAccount(symbol, backedCoins) {
     let {selectedGateway} = getAssetAndGateway(symbol);
     let coin = getBackedCoin(symbol, backedCoins);
     if (!coin) return undefined;
-    else if (selectedGateway === "RUDEX") return coin.issuerId || coin.issuer;
     else return coin.intermediateAccount || coin.issuer;
 }
 
@@ -86,45 +64,6 @@ export function getBackedCoin(symbol, backedCoins) {
 
 export function getAssetAndGateway(symbol) {
     let [selectedGateway, selectedAsset] = symbol.split(".");
-    if (symbol === "PPY") {
-        selectedGateway = "RUDEX";
-        selectedAsset = "PPY";
-    }
     return {selectedGateway, selectedAsset};
 }
 
-export function updateGatewayBackers(chain = "4018d784") {
-    // Only fetch this when on desired chain, default to main chain
-    if (!Apis.instance().chain_id) return;
-    if (Apis.instance().chain_id.substr(0, 8) === chain) {
-        // BlockTrades
-        GatewayActions.fetchPairs.defer();
-
-        // Walk all Gateways
-        for (let gateway in availableGateways) {
-            if (!!availableGateways[gateway].isEnabled) {
-                if (!!availableGateways[gateway].isSimple) {
-                    GatewayActions.fetchCoinsSimple.defer({
-                        backer: availableGateways[gateway].id,
-                        url:
-                            availableGateways[gateway].baseAPI.BASE +
-                            availableGateways[gateway].baseAPI.COINS_LIST
-                    });
-                } else {
-                    GatewayActions.fetchCoins.defer({
-                        backer: availableGateways[gateway].id,
-                        url:
-                            availableGateways[gateway].baseAPI.BASE +
-                            availableGateways[gateway].baseAPI.COINS_LIST,
-                        urlBridge:
-                            availableGateways[gateway].baseAPI.BASE +
-                            availableGateways[gateway].baseAPI.TRADING_PAIRS,
-                        urlWallets:
-                            availableGateways[gateway].baseAPI.BASE +
-                            availableGateways[gateway].baseAPI.ACTIVE_WALLETS
-                    });
-                }
-            }
-        }
-    }
-}

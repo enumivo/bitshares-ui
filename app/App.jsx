@@ -16,7 +16,6 @@ import Footer from "./components/Layout/Footer";
 import Deprecate from "./Deprecate";
 import Incognito from "./components/Layout/Incognito";
 import {isIncognito} from "feature_detect";
-import {updateGatewayBackers} from "common/gatewayUtils";
 import titleUtils from "common/titleUtils";
 import {BodyClassName, Notification} from "bitshares-ui-style-guide";
 import {DEFAULT_NOTIFICATION_DURATION} from "services/Notification";
@@ -261,7 +260,6 @@ class App extends React.Component {
                 this.setState({incognito});
             }.bind(this)
         );
-        updateGatewayBackers();
     }
 
     componentDidUpdate(prevProps) {

@@ -71,7 +71,6 @@ require("file-loader?name=asset-symbols/[name].png!./zrx.png");
 require("file-loader?name=asset-symbols/[name].png!./xrp.png");
 require("file-loader?name=asset-symbols/[name].png!./xmr.png");
 require("file-loader?name=asset-symbols/[name].png!./sbd.png");
-require("file-loader?name=asset-symbols/[name].png!./rudex.btc.png");
 require("file-loader?name=asset-symbols/[name].png!./sth.png");
 require("file-loader?name=asset-symbols/[name].png!./kec.png");
 require("file-loader?name=asset-symbols/[name].png!./ltc.png");

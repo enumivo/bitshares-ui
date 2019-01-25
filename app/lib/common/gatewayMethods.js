@@ -46,21 +46,6 @@ export function fetchCoins(
     });
 }
 
-export function fetchCoinsSimple(
-    url = openledgerAPIs.BASE + openledgerAPIs.COINS_LIST
-) {
-    return fetch(url)
-        .then(reply =>
-            reply.json().then(result => {
-                return result;
-            })
-        )
-        .catch(err => {
-            console.log(`fetchCoinsSimple error from ${url}: ${err}`);
-            throw err;
-        });
-}
-
 export function fetchTradingPairs(
     url = blockTradesAPIs.BASE + blockTradesAPIs.TRADING_PAIRS
 ) {

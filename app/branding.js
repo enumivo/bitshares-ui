@@ -95,8 +95,6 @@ export function getMyMarketsQuotes() {
         gdexTokens: [],
         openledgerTokens: [
         ],
-        rudexTokens: [
-        ],
         sparkTokens: [],
         winTokens: [],
         otherTokens: [
