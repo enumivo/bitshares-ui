@@ -6,7 +6,6 @@
         "as_collateral": "担保",
         "asset": "アセット",
         "asset_details": "アセット詳細",
-        "bittrex_scam": "このアカウントは実際のBittrexアカウントではありません。このアカウントに送信してください: bittrex-deposit",
         "bts_market": "マーケット",
         "collaterals": "マージンポジション",
         "confirm_asset_modal": {

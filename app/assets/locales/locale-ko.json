@@ -6,7 +6,6 @@
         "as_collateral": "Collateral",
         "asset": "자산",
         "asset_details": "Asset details",
-        "bittrex_scam": "This account is not the real Bittrex account, please send to this account: bittrex-deposit.",
         "bts_market": "종목",
         "collaterals": "보증금 포지션",
         "confirm_asset_modal": {

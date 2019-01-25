@@ -6,7 +6,6 @@
         "as_collateral": "Collateral",
         "asset": "Asset",
         "asset_details": "Asset details",
-        "bittrex_scam": "This account is not the real Bittrex account, please send to this account: bittrex-deposit.",
         "bts_market": "Market",
         "collaterals": "Margin Positions",
         "confirm_asset_modal": {
