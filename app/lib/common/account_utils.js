@@ -104,9 +104,7 @@ export default class AccountUtils {
 
     static isKnownScammer(account) {
         let scamMessage = null;
-        if (scamAccountsPolo.indexOf(account) !== -1) {
-            scamMessage = counterpart.translate("account.polo_scam");
-        } else if (scamAccountsOther.indexOf(account) !== -1) {
+        if (scamAccountsOther.indexOf(account) !== -1) {
             scamMessage = counterpart.translate("account.other_scam");
         }
         return scamMessage;
