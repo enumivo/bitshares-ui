@@ -27,7 +27,7 @@ export function getWalletURL() {
  */
 export function getFaucet() {
     return {
-        url: "https://faucet.eidos.one:3000", // 2017-12-infrastructure worker proposal
+        url: "http://faucet.eidos.one:3000", // 2017-12-infrastructure worker proposal
         show: true,
         editable: false
     };
