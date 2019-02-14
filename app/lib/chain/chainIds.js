@@ -1,3 +1,3 @@
 export default {
-    MAIN_NET: "abd969e3310e5ecf17327f034ba14b2b053bb90bda123d339ac5ef6763690fb7"
+    MAIN_NET: "b07219d3d9a17a6bf5db7f545ac9ade5ac4ce59e461d4ec73ed0383978a039aa"
 };
