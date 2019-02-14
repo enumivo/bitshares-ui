@@ -116,8 +116,15 @@ export const settingsAPIs = {
             location: "Main",
             operator: "Eidos One",
             contact: "quattrocento1@hotmail.com"
-        }
-    ],
+        },
+        {
+            url: "ws://dex.eidos.one:8000",
+            region: "Main",
+            country: "Main",
+            location: "Main",
+            operator: "Eidos One",
+            contact: "quattrocento1@hotmail.com"
+        }    ],
     DEFAULT_FAUCET: getFaucet().url,
-    TESTNET_FAUCET: "https://faucet.eidos.one"
+    TESTNET_FAUCET: "http://faucet.eidos.one:3000"
 };
