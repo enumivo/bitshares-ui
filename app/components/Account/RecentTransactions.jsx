@@ -254,45 +254,7 @@ class RecentTransactions extends React.Component {
                       </td>
                   </tr>
               ];
-        let action = (
-            <tr className="total-value" key="total_value">
-                <td style={{textAlign: "center"}}>
-                    {historyCount > 0 ? (
-                        <span>
-                            <a
-                                className="inline-block"
-                                data-tip={counterpart.translate(
-                                    "transaction.csv_tip"
-                                )}
-                                data-place="bottom"
-                            >
-                                <Icon
-                                    name="excel"
-                                    title="icons.excel"
-                                    className="icon-14px"
-                                />
-                            </a>
-                        </span>
-                    ) : null}
-                </td>
-                <td className="column-hide-tiny" />
-                <td style={{textAlign: "center"}}>
-                    &nbsp;
-                    {(this.props.showMore && historyCount > this.props.limit) ||
-                    (20 && limit < historyCount) ? (
-                        <a onClick={this._onIncreaseLimit.bind(this)}>
-                            <Icon
-                                name="chevron-down"
-                                title="icons.chevron_down.transactions"
-                                className="icon-14px"
-                            />
-                        </a>
-                    ) : null}
-                </td>
-                <td />
-            </tr>
-        );
-
+              
         return (
             <div className="recent-transactions no-overflow" style={style}>
                 <div className="generic-bordered-box">
@@ -388,7 +350,6 @@ class RecentTransactions extends React.Component {
                             }
                             rows={display_history}
                             label="utility.total_x_operations"
-                            extraRow={action}
                         />
                     </div>
                     {this.state.fetchingAccountHistory && <LoadingIndicator />}
